@@ -21,9 +21,12 @@ letter-spacing: 0.01em;
 h1, h2, h3, h4, h5, h6, .font-headline {
 font-family: 'Anton', sans-serif;
 letter-spacing: 1px;
+text-transform: uppercase;
 }
 .font-serif {
-font-family: 'Instrument Serif', serif;
+font-family: 'Lora', serif !important;
+letter-spacing: normal !important;
+text-transform: none !important;
 }
 iconify-icon {
 stroke-width: 1.5;
@@ -204,6 +207,7 @@ body.light-mode #framework,
 body.light-mode #steps,
 body.light-mode #testimonials,
 body.light-mode #blog,
+body.light-mode #playlists,
 body.light-mode footer {
 background: #F4EFE6;
 }
@@ -254,7 +258,7 @@ background: rgba(244, 239, 230, 0.95);
 }
 body.light-mode #blogModalContent,
 body.light-mode #blogModal .bg-\[\#0a0a0a\] {
-background: #ede7db;
+background: #ffffff;
 }
 body.light-mode #blogModal .bg-black\/80 {
 background: rgba(244, 239, 230, 0.8);
@@ -367,7 +371,8 @@ linear-gradient(to bottom, rgba(114, 21, 21, 0.1) 1px, transparent 1px);
     <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-[#721515] opacity-[0.03] blur-[120px] rounded-full pointer-events-none z-0"></div>
     <div class="fixed bottom-0 right-0 w-[800px] h-[800px] bg-[#721515] opacity-[0.02] blur-[150px] rounded-full pointer-events-none z-0"></div>
 
-    <nav class="fixed top-0 w-full z-50 backdrop-blur-xl bg-[#050505]/60 border-b border-white/5 py-4 px-6 md:px-12 flex justify-between items-center transition-all duration-300">
+    <nav class="fixed top-0 w-full z-50 backdrop-blur-xl bg-[#050505]/60 border-b border-white/5 py-4 px-6 md:px-12 transition-all duration-300">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
         <a href="#" class="font-serif text-2xl tracking-tight text-[#F4EFE6] relative z-50 flex items-center gap-3">
             <iconify-icon icon="solar:book-2-linear" class="text-xl text-[#721515]"></iconify-icon>
             Vanessa Prestridge Graf
@@ -414,9 +419,10 @@ linear-gradient(to bottom, rgba(114, 21, 21, 0.1) 1px, transparent 1px);
                 </a>
             </div>
         </div>
+    </div>
     </nav>
 
-    <section id="hero" class="relative w-full flex flex-col lg:flex-row items-center justify-center pt-24 pb-16 px-6 md:px-12 lg:px-16 lg:gap-0 z-10 overflow-hidden max-h-[875px]">
+    <section id="hero" class="relative w-full flex flex-col items-center pt-24 pb-16 px-6 md:px-12 lg:px-16 z-10 overflow-hidden max-h-[875px]">
 
         <div class="hero-gradient-blob" id="heroBlob"></div>
 
@@ -424,7 +430,8 @@ linear-gradient(to bottom, rgba(114, 21, 21, 0.1) 1px, transparent 1px);
             <div class="surface-grid absolute top-0 left-[-50%] w-[200%] h-[200%]"></div>
         </div>
 
-        <div class="w-full lg:w-[55%] flex flex-col justify-center relative z-20 mt-10 lg:mt-0 text-center lg:text-left lg:pl-8">
+        <div class="w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:gap-0 relative z-20">
+        <div class="w-full lg:w-[55%] flex flex-col justify-center mt-10 lg:mt-0 text-center lg:text-left lg:pl-8">
             <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md mb-8 w-fit mx-auto lg:mx-0">
                 <span class="w-1.5 h-1.5 rounded-full bg-[#721515] animate-pulse shadow-[0_0_10px_#721515]"></span>
                 <span class="text-xs font-medium tracking-widest text-white/80 uppercase">Available Worldwide</span>
@@ -452,16 +459,9 @@ linear-gradient(to bottom, rgba(114, 21, 21, 0.1) 1px, transparent 1px);
                 </button>
             </div>
 
-            <div class="mt-12 flex items-center gap-6 justify-center lg:justify-start opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-                <div class="text-xs tracking-widest uppercase font-medium">Featured In</div>
-                <div class="h-px w-8 bg-white/20"></div>
-                <iconify-icon icon="solar:global-linear" class="text-2xl"></iconify-icon>
-                <iconify-icon icon="solar:diploma-linear" class="text-2xl"></iconify-icon>
-                <iconify-icon icon="solar:cup-star-linear" class="text-2xl"></iconify-icon>
-            </div>
         </div>
 
-        <div class="w-full lg:w-[45%] h-[500px] md:h-[700px] flex items-center justify-center relative z-10 mt-16 lg:mt-0">
+        <div class="w-full lg:w-[45%] h-[500px] md:h-[700px] flex items-center justify-center relative mt-16 lg:mt-0">
             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-[#721515]/20 blur-[80px] rounded-full pointer-events-none"></div>
 
             <div class="book-scene">
@@ -479,6 +479,7 @@ linear-gradient(to bottom, rgba(114, 21, 21, 0.1) 1px, transparent 1px);
             </div>
 
             <div class="absolute bottom-10 left-1/2 -translate-x-1/2 w-[240px] md:w-[300px] h-[20px] bg-black blur-xl rounded-full animate-shadow z-0"></div>
+        </div>
         </div>
     </section>
 
@@ -502,7 +503,7 @@ linear-gradient(to bottom, rgba(114, 21, 21, 0.1) 1px, transparent 1px);
                         <div class="w-12 h-12 rounded-full bg-[#721515]/10 border border-[#721515]/30 flex items-center justify-center mb-8 group-hover:bg-[#721515]/20 group-hover:border-[#721515]/50 transition-colors">
                             <iconify-icon icon="solar:eye-linear" class="text-xl text-[#721515]"></iconify-icon>
                         </div>
-                        <h4 class="text-2xl font-headline font-medium tracking-tight text-[#1a0a0a] mb-3">Depth Psychology</h4>
+                        <h4 class="text-2xl font-headline font-medium text-[#1a0a0a] mb-3">Depth Psychology</h4>
                         <p class="text-base text-[#3d2020] font-light leading-relaxed">
                             Blending clinical insight with mysticism to illuminate the patriarchal systems that shaped your relationships and sense of self.
                         </p>
@@ -515,7 +516,7 @@ linear-gradient(to bottom, rgba(114, 21, 21, 0.1) 1px, transparent 1px);
                         <div class="w-12 h-12 rounded-full bg-[#721515]/10 border border-[#721515]/30 flex items-center justify-center mb-8 group-hover:bg-[#721515]/20 group-hover:border-[#721515]/50 transition-colors">
                             <iconify-icon icon="solar:fire-linear" class="text-xl text-[#721515]"></iconify-icon>
                         </div>
-                        <h4 class="text-2xl font-headline font-medium tracking-tight text-[#1a0a0a] mb-3">Feminine Rebellion</h4>
+                        <h4 class="text-2xl font-headline font-medium text-[#1a0a0a] mb-3">Feminine Rebellion</h4>
                         <p class="text-base text-[#3d2020] font-light leading-relaxed">
                             A rallying cry for women to leave not only harmful partners but the invisible rules and systems that kept them small.
                         </p>
@@ -528,7 +529,7 @@ linear-gradient(to bottom, rgba(114, 21, 21, 0.1) 1px, transparent 1px);
                         <div class="w-12 h-12 rounded-full bg-[#721515]/10 border border-[#721515]/30 flex items-center justify-center mb-8 group-hover:bg-[#721515]/20 group-hover:border-[#721515]/50 transition-colors">
                             <iconify-icon icon="solar:heart-linear" class="text-xl text-[#721515]"></iconify-icon>
                         </div>
-                        <h4 class="text-2xl font-headline font-medium tracking-tight text-[#1a0a0a] mb-3">Reclaim Sovereignty</h4>
+                        <h4 class="text-2xl font-headline font-medium text-[#1a0a0a] mb-3">Reclaim Sovereignty</h4>
                         <p class="text-base text-[#3d2020] font-light leading-relaxed">
                             Healing as an act of defiance — reclaim sovereignty over your heart, body, and joy with radical compassion and fierce humor.
                         </p>
@@ -544,192 +545,161 @@ linear-gradient(to bottom, rgba(114, 21, 21, 0.1) 1px, transparent 1px);
         <div class="absolute right-0 bottom-1/4 w-[400px] h-[400px] bg-[#721515] opacity-[0.03] blur-[100px] rounded-full pointer-events-none"></div>
         <div class="max-w-6xl mx-auto relative z-10">
             <h2 class="text-xs font-medium uppercase tracking-widest text-[#a52020] text-center mb-6">The Roadmap</h2>
-            <h3 class="text-4xl md:text-5xl font-headline font-bold text-center text-[#F4EFE6] mb-20 tracking-tight">11 Steps to Leaving Your Daddy</h3>
+            <h3 class="text-4xl md:text-5xl font-headline font-bold text-center text-[#F4EFE6] mb-20">11 Steps to Leaving Your Daddy</h3>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <style>
+                .flip-card { perspective: 1000px; cursor: pointer; }
+                .flip-card-inner { position: relative; width: 100%; height: 100%; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); transform-style: preserve-3d; }
+                .flip-card:hover .flip-card-inner, .flip-card.flipped .flip-card-inner { transform: rotateY(180deg); }
+                .flip-card-front, .flip-card-back { position: absolute; inset: 0; backface-visibility: hidden; border-radius: 1rem; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; }
+                .flip-card-front { background: #ffffff; border: 1px solid rgba(0,0,0,0.08); }
+                .flip-card-back { background: #721515; transform: rotateY(180deg); }
+                .flip-card-back * { color: #ffffff !important; }
+                .flip-card-back .text-white\/50 { color: rgba(255,255,255,0.5) !important; }
+                .flip-card-back .text-white\/70 { color: rgba(255,255,255,0.7) !important; }
+            </style>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
 
-                <!-- Step 1: Leave the House -->
-                <div class="step-card group bg-[#0a0a0a] border border-white/5 rounded-2xl p-8 hover:border-[#721515]/30 transition-all duration-500 relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-b from-[#721515]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-                    <div class="relative z-10">
-                        <div class="w-16 h-16 mb-6 text-[#a52020] group-hover:text-[#c43030] transition-colors duration-500">
-                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M8 36L32 14L56 36"/>
-                                <path d="M16 32V54H48V32"/>
-                                <path d="M32 54L32 42"/>
-                                <path d="M32 42L44 42"/>
-                                <path d="M40 38L44 42L40 46"/>
-                            </svg>
+                <div class="flip-card aspect-square" onclick="this.classList.toggle('flipped')">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="public/images/vg-1.png" alt="Step 1: Leave the House" class="w-[75%] h-auto">
                         </div>
-                        <div class="step-num text-[#721515]/60 text-xs font-medium uppercase tracking-widest mb-2">Step 1</div>
-                        <h4 class="step-title text-xl font-headline font-medium text-[#F4EFE6] mb-3 tracking-tight">Leave the House</h4>
-                        <p class="step-desc text-sm text-white/40 font-light leading-relaxed">The first act of freedom begins with your feet crossing the threshold.</p>
+                        <div class="flip-card-back">
+                            <div class="text-[10px] uppercase tracking-widest text-white/50 mb-3">Step 1</div>
+                            <h4 class="font-headline text-lg text-white font-medium text-center mb-3">Leave the House</h4>
+                            <p class="text-sm text-white/70 font-light leading-relaxed text-center">The first act of freedom begins with your feet crossing the threshold.</p>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Step 2: The Art of No -->
-                <div class="step-card group bg-[#0a0a0a] border border-white/5 rounded-2xl p-8 hover:border-[#721515]/30 transition-all duration-500 relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-b from-[#721515]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-                    <div class="relative z-10">
-                        <div class="w-16 h-16 mb-6 text-[#a52020] group-hover:text-[#c43030] transition-colors duration-500">
-                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="32" cy="32" r="22"/>
-                                <line x1="18" y1="18" x2="46" y2="46"/>
-                            </svg>
+                <div class="flip-card aspect-square" onclick="this.classList.toggle('flipped')">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="public/images/vg-2.png" alt="Step 2: The Art of No" class="w-[75%] h-auto">
                         </div>
-                        <div class="step-num text-[#721515]/60 text-xs font-medium uppercase tracking-widest mb-2">Step 2</div>
-                        <h4 class="step-title text-xl font-headline font-medium text-[#F4EFE6] mb-3 tracking-tight">The Art of No</h4>
-                        <p class="step-desc text-sm text-white/40 font-light leading-relaxed">Two letters that rewire everything. Learn to say it without apology.</p>
+                        <div class="flip-card-back">
+                            <div class="text-[10px] uppercase tracking-widest text-white/50 mb-3">Step 2</div>
+                            <h4 class="font-headline text-lg text-white font-medium text-center mb-3">The Art of No</h4>
+                            <p class="text-sm text-white/70 font-light leading-relaxed text-center">Two letters that rewire everything. Learn to say it without apology.</p>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Step 3: Quit Church -->
-                <div class="step-card group bg-[#0a0a0a] border border-white/5 rounded-2xl p-8 hover:border-[#721515]/30 transition-all duration-500 relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-b from-[#721515]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-                    <div class="relative z-10">
-                        <div class="w-16 h-16 mb-6 text-[#a52020] group-hover:text-[#c43030] transition-colors duration-500">
-                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M32 6V20"/>
-                                <path d="M24 13H40"/>
-                                <path d="M20 24L32 20L44 24V56H20V24Z"/>
-                                <path d="M20 56H44"/>
-                            </svg>
+                <div class="flip-card aspect-square" onclick="this.classList.toggle('flipped')">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="public/images/vg-3.png" alt="Step 3: Quit Church" class="w-[75%] h-auto">
                         </div>
-                        <div class="step-num text-[#721515]/60 text-xs font-medium uppercase tracking-widest mb-2">Step 3</div>
-                        <h4 class="step-title text-xl font-headline font-medium text-[#F4EFE6] mb-3 tracking-tight">Quit Church</h4>
-                        <p class="step-desc text-sm text-white/40 font-light leading-relaxed">Walk away from the institutions that demand your silence and submission.</p>
+                        <div class="flip-card-back">
+                            <div class="text-[10px] uppercase tracking-widest text-white/50 mb-3">Step 3</div>
+                            <h4 class="font-headline text-lg text-white font-medium text-center mb-3">Quit Church</h4>
+                            <p class="text-sm text-white/70 font-light leading-relaxed text-center">Walk away from the institutions that demand your silence and submission.</p>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Step 4: Make Money -->
-                <div class="step-card group bg-[#0a0a0a] border border-white/5 rounded-2xl p-8 hover:border-[#721515]/30 transition-all duration-500 relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-b from-[#721515]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-                    <div class="relative z-10">
-                        <div class="w-16 h-16 mb-6 text-[#a52020] group-hover:text-[#c43030] transition-colors duration-500">
-                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M32 10V54"/>
-                                <path d="M40 20C40 14 36 12 32 12C28 12 24 14 24 20C24 26 32 28 32 28C32 28 40 30 40 38C40 44 36 48 32 48C28 48 24 44 24 38"/>
-                                <path d="M26 10H38"/>
-                                <path d="M26 54H38"/>
-                            </svg>
+                <div class="flip-card aspect-square" onclick="this.classList.toggle('flipped')">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="public/images/vg-4.png" alt="Step 4: Make Money" class="w-[75%] h-auto">
                         </div>
-                        <div class="step-num text-[#721515]/60 text-xs font-medium uppercase tracking-widest mb-2">Step 4</div>
-                        <h4 class="step-title text-xl font-headline font-medium text-[#F4EFE6] mb-3 tracking-tight">Make Money</h4>
-                        <p class="step-desc text-sm text-white/40 font-light leading-relaxed">Financial sovereignty is not optional — it's the backbone of your freedom.</p>
+                        <div class="flip-card-back">
+                            <div class="text-[10px] uppercase tracking-widest text-white/50 mb-3">Step 4</div>
+                            <h4 class="font-headline text-lg text-white font-medium text-center mb-3">Make Money</h4>
+                            <p class="text-sm text-white/70 font-light leading-relaxed text-center">Financial sovereignty is not optional — it's the backbone of your freedom.</p>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Step 5: Take a Lover -->
-                <div class="step-card group bg-[#0a0a0a] border border-white/5 rounded-2xl p-8 hover:border-[#721515]/30 transition-all duration-500 relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-b from-[#721515]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-                    <div class="relative z-10">
-                        <div class="w-16 h-16 mb-6 text-[#a52020] group-hover:text-[#c43030] transition-colors duration-500">
-                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M32 56L10 34C4 26 6 14 14 10C22 6 30 12 32 18C34 12 42 6 50 10C58 14 60 26 54 34L32 56Z"/>
-                            </svg>
+                <div class="flip-card aspect-square" onclick="this.classList.toggle('flipped')">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="public/images/vg-5.png" alt="Step 5: Take a Lover" class="w-[75%] h-auto">
                         </div>
-                        <div class="step-num text-[#721515]/60 text-xs font-medium uppercase tracking-widest mb-2">Step 5</div>
-                        <h4 class="step-title text-xl font-headline font-medium text-[#F4EFE6] mb-3 tracking-tight">Take a Lover <span class="text-white/30 text-sm">(not a husband)</span></h4>
-                        <p class="step-desc text-sm text-white/40 font-light leading-relaxed">Desire on your terms. Pleasure without the contract, connection without the cage.</p>
+                        <div class="flip-card-back">
+                            <div class="text-[10px] uppercase tracking-widest text-white/50 mb-3">Step 5</div>
+                            <h4 class="font-headline text-lg text-white font-medium text-center mb-3">Take a Lover</h4>
+                            <p class="text-sm text-white/70 font-light leading-relaxed text-center">Desire on your terms. Pleasure without the contract, connection without the cage.</p>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Step 6: Meet Your Vagine -->
-                <div class="step-card group bg-[#0a0a0a] border border-white/5 rounded-2xl p-8 hover:border-[#721515]/30 transition-all duration-500 relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-b from-[#721515]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-                    <div class="relative z-10">
-                        <div class="w-16 h-16 mb-6 text-[#a52020] group-hover:text-[#c43030] transition-colors duration-500">
-                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="32" cy="22" r="16"/>
-                                <path d="M32 38V52"/>
-                                <path d="M22 46H42"/>
-                            </svg>
+                <div class="flip-card aspect-square" onclick="this.classList.toggle('flipped')">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="public/images/vg-6.png" alt="Step 6: Meet Your Vagina" class="w-[75%] h-auto">
                         </div>
-                        <div class="step-num text-[#721515]/60 text-xs font-medium uppercase tracking-widest mb-2">Step 6</div>
-                        <h4 class="step-title text-xl font-headline font-medium text-[#F4EFE6] mb-3 tracking-tight">Meet your Vagine, Rewrite Herstory</h4>
-                        <p class="step-desc text-sm text-white/40 font-light leading-relaxed">Reclaim the body that was colonized. Rewrite the narrative they wrote for you.</p>
+                        <div class="flip-card-back">
+                            <div class="text-[10px] uppercase tracking-widest text-white/50 mb-3">Step 6</div>
+                            <h4 class="font-headline text-lg text-white font-medium text-center mb-3">Meet Your Vagina</h4>
+                            <p class="text-sm text-white/70 font-light leading-relaxed text-center">Reclaim the body that was colonized. Rewrite the narrative they wrote for you.</p>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Step 7: Your Internalized Misogyny -->
-                <div class="step-card group bg-[#0a0a0a] border border-white/5 rounded-2xl p-8 hover:border-[#721515]/30 transition-all duration-500 relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-b from-[#721515]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-                    <div class="relative z-10">
-                        <div class="w-16 h-16 mb-6 text-[#a52020] group-hover:text-[#c43030] transition-colors duration-500">
-                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="32" cy="32" r="22"/>
-                                <path d="M22 22L32 32L42 22"/>
-                                <path d="M22 36L32 46L42 36"/>
-                            </svg>
+                <div class="flip-card aspect-square" onclick="this.classList.toggle('flipped')">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="public/images/vg-7.png" alt="Step 7: Your Internalized Misogyny" class="w-[75%] h-auto">
                         </div>
-                        <div class="step-num text-[#721515]/60 text-xs font-medium uppercase tracking-widest mb-2">Step 7</div>
-                        <h4 class="step-title text-xl font-headline font-medium text-[#F4EFE6] mb-3 tracking-tight">Your Internalized Misogyny</h4>
-                        <p class="step-desc text-sm text-white/40 font-light leading-relaxed">The voice in your head judging other women? That's the patriarchy talking through you.</p>
+                        <div class="flip-card-back">
+                            <div class="text-[10px] uppercase tracking-widest text-white/50 mb-3">Step 7</div>
+                            <h4 class="font-headline text-lg text-white font-medium text-center mb-3">Your Internalized Misogyny</h4>
+                            <p class="text-sm text-white/70 font-light leading-relaxed text-center">The voice in your head judging other women? That's the patriarchy talking through you.</p>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Step 8: Righteous Fucking Indignation -->
-                <div class="step-card group bg-[#0a0a0a] border border-white/5 rounded-2xl p-8 hover:border-[#721515]/30 transition-all duration-500 relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-b from-[#721515]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-                    <div class="relative z-10">
-                        <div class="w-16 h-16 mb-6 text-[#a52020] group-hover:text-[#c43030] transition-colors duration-500">
-                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M32 6L40 26H58L44 38L50 58L32 46L14 58L20 38L6 26H24Z"/>
-                            </svg>
+                <div class="flip-card aspect-square" onclick="this.classList.toggle('flipped')">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="public/images/vg-8.png" alt="Step 8: Righteous Fucking Indignation" class="w-[75%] h-auto">
                         </div>
-                        <div class="step-num text-[#721515]/60 text-xs font-medium uppercase tracking-widest mb-2">Step 8</div>
-                        <h4 class="step-title text-xl font-headline font-medium text-[#F4EFE6] mb-3 tracking-tight">Righteous Fucking Indignation</h4>
-                        <p class="step-desc text-sm text-white/40 font-light leading-relaxed">Your anger is sacred. Let it burn clean and light the way forward.</p>
+                        <div class="flip-card-back">
+                            <div class="text-[10px] uppercase tracking-widest text-white/50 mb-3">Step 8</div>
+                            <h4 class="font-headline text-lg text-white font-medium text-center mb-3">Righteous F---ing Indignation</h4>
+                            <p class="text-sm text-white/70 font-light leading-relaxed text-center">Your anger is sacred. Let it burn clean and light the way forward.</p>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Step 9: No Better, Be Better, Do Better -->
-                <div class="step-card group bg-[#0a0a0a] border border-white/5 rounded-2xl p-8 hover:border-[#721515]/30 transition-all duration-500 relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-b from-[#721515]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-                    <div class="relative z-10">
-                        <div class="w-16 h-16 mb-6 text-[#a52020] group-hover:text-[#c43030] transition-colors duration-500">
-                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M10 50L26 34L38 42L54 14"/>
-                                <path d="M44 14H54V24"/>
-                            </svg>
+                <div class="flip-card aspect-square" onclick="this.classList.toggle('flipped')">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="public/images/vg-9.png" alt="Step 9: Know Better, Be Better, Do Better" class="w-[75%] h-auto">
                         </div>
-                        <div class="step-num text-[#721515]/60 text-xs font-medium uppercase tracking-widest mb-2">Step 9</div>
-                        <h4 class="step-title text-xl font-headline font-medium text-[#F4EFE6] mb-3 tracking-tight">No Better, Be Better, Do Better</h4>
-                        <p class="step-desc text-sm text-white/40 font-light leading-relaxed">Stop performing goodness. Start embodying it — messy, real, and unapologetic.</p>
+                        <div class="flip-card-back">
+                            <div class="text-[10px] uppercase tracking-widest text-white/50 mb-3">Step 9</div>
+                            <h4 class="font-headline text-lg text-white font-medium text-center mb-3">Know Better, Be Better, Do Better</h4>
+                            <p class="text-sm text-white/70 font-light leading-relaxed text-center">Stop performing goodness. Start embodying it — messy, real, and unapologetic.</p>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Step 10: Come to Jesus -->
-                <div class="step-card group bg-[#0a0a0a] border border-white/5 rounded-2xl p-8 hover:border-[#721515]/30 transition-all duration-500 relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-b from-[#721515]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-                    <div class="relative z-10">
-                        <div class="w-16 h-16 mb-6 text-[#a52020] group-hover:text-[#c43030] transition-colors duration-500">
-                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M32 58C32 58 14 42 14 28C14 16 22 8 32 8C42 8 50 16 50 28C50 42 32 58 32 58Z"/>
-                                <circle cx="32" cy="28" r="4" fill="currentColor"/>
-                            </svg>
+                <div class="flip-card aspect-square" onclick="this.classList.toggle('flipped')">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="public/images/vg-10.png" alt="Step 10: Come to Jesus" class="w-[75%] h-auto">
                         </div>
-                        <div class="step-num text-[#721515]/60 text-xs font-medium uppercase tracking-widest mb-2">Step 10</div>
-                        <h4 class="step-title text-xl font-headline font-medium text-[#F4EFE6] mb-3 tracking-tight">Come to Jesus, Drop, Drip, Drip — Or Both</h4>
-                        <p class="step-desc text-sm text-white/40 font-light leading-relaxed">The reckoning. Whether divine or chemical, the tears that finally fall are holy.</p>
+                        <div class="flip-card-back">
+                            <div class="text-[10px] uppercase tracking-widest text-white/50 mb-3">Step 10</div>
+                            <h4 class="font-headline text-lg text-white font-medium text-center mb-3">Come to Jesus, Drip, Drip, Drip</h4>
+                            <p class="text-sm text-white/70 font-light leading-relaxed text-center">The reckoning. Whether divine or chemical, the tears that finally fall are holy.</p>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Step 11: In Charge of Happy -->
-                <div class="step-card group bg-[#0a0a0a] border border-white/5 rounded-2xl p-8 hover:border-[#721515]/30 transition-all duration-500 relative overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-b from-[#721515]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-                    <div class="relative z-10">
-                        <div class="w-16 h-16 mb-6 text-[#a52020] group-hover:text-[#c43030] transition-colors duration-500">
-                            <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="32" cy="32" r="22"/>
-                                <path d="M20 38C24 46 40 46 44 38"/>
-                                <circle cx="24" cy="26" r="3" fill="currentColor"/>
-                                <circle cx="40" cy="26" r="3" fill="currentColor"/>
-                            </svg>
+                <div class="flip-card aspect-square" onclick="this.classList.toggle('flipped')">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="public/images/vg-11.png" alt="Step 11: In Charge of Happy" class="w-[75%] h-auto">
                         </div>
-                        <div class="step-num text-[#721515]/60 text-xs font-medium uppercase tracking-widest mb-2">Step 11</div>
-                        <h4 class="step-title text-xl font-headline font-medium text-[#F4EFE6] mb-3 tracking-tight">In Charge of Happy</h4>
-                        <p class="step-desc text-sm text-white/40 font-light leading-relaxed">Joy isn't given to you. You build it, guard it, and refuse to hand the keys to anyone else.</p>
+                        <div class="flip-card-back">
+                            <div class="text-[10px] uppercase tracking-widest text-white/50 mb-3">Step 11</div>
+                            <h4 class="font-headline text-lg text-white font-medium text-center mb-3">In Charge of Happy</h4>
+                            <p class="text-sm text-white/70 font-light leading-relaxed text-center">Joy isn't given to you. You build it, guard it, and refuse to hand the keys to anyone else.</p>
+                        </div>
                     </div>
                 </div>
 
@@ -899,11 +869,6 @@ linear-gradient(to bottom, rgba(114, 21, 21, 0.1) 1px, transparent 1px);
                     Vanessa's writing blends psychological insight, personal reflection, and cultural critique. Through her work she encourages readers to question inherited narratives, cultivate self-trust, and pursue lives guided by autonomy, authenticity, and emotional truth. She lives in California where she maintains a psychotherapy practice and continues writing about healing, power, and personal liberation.
                 </p>
 
-                <div class="flex items-center gap-6">
-                    <a href="#" class="px-8 py-3.5 rounded-full border border-white/10 bg-white/5 text-white/90 font-medium text-base hover:bg-white/10 hover:text-white transition-all">
-                        View Clinical Practice
-                    </a>
-                </div>
             </div>
         </div>
     </section>
@@ -922,7 +887,6 @@ linear-gradient(to bottom, rgba(114, 21, 21, 0.1) 1px, transparent 1px);
                 <article class="blog-card group bg-[#0a0a0a] border border-white/5 rounded-2xl overflow-hidden cursor-pointer hover:border-[#721515]/30 transition-all duration-300" data-blog="0">
                     <div class="h-52 relative overflow-hidden">
                         <img src="daddyship.png" alt="Jumping off the Daddyship" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/40 to-transparent"></div>
                     </div>
                     <div class="p-5">
                         <div class="text-[10px] uppercase tracking-widest text-[#a52020] mb-2">Freedom</div>
@@ -935,7 +899,6 @@ linear-gradient(to bottom, rgba(114, 21, 21, 0.1) 1px, transparent 1px);
                 <article class="blog-card group bg-[#0a0a0a] border border-white/5 rounded-2xl overflow-hidden cursor-pointer hover:border-[#721515]/30 transition-all duration-300" data-blog="1">
                     <div class="h-52 relative overflow-hidden">
                         <img src="power-of-no.png" alt="The Power of No" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/40 to-transparent"></div>
                     </div>
                     <div class="p-5">
                         <div class="text-[10px] uppercase tracking-widest text-[#a52020] mb-2">Boundaries</div>
@@ -948,7 +911,6 @@ linear-gradient(to bottom, rgba(114, 21, 21, 0.1) 1px, transparent 1px);
                 <article class="blog-card group bg-[#0a0a0a] border border-white/5 rounded-2xl overflow-hidden cursor-pointer hover:border-[#721515]/30 transition-all duration-300" data-blog="2">
                     <div class="h-52 relative overflow-hidden">
                         <img src="helen-keller.jpg" alt="Helen Keller" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/40 to-transparent"></div>
                     </div>
                     <div class="p-5">
                         <div class="text-[10px] uppercase tracking-widest text-[#a52020] mb-2">Spirituality</div>
@@ -961,7 +923,6 @@ linear-gradient(to bottom, rgba(114, 21, 21, 0.1) 1px, transparent 1px);
                 <article class="blog-card group bg-[#0a0a0a] border border-white/5 rounded-2xl overflow-hidden cursor-pointer hover:border-[#721515]/30 transition-all duration-300" data-blog="3">
                     <div class="h-52 relative overflow-hidden">
                         <img src="financial-freedom.png" alt="Financial Self-Sufficiency" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/40 to-transparent"></div>
                     </div>
                     <div class="p-5">
                         <div class="text-[10px] uppercase tracking-widest text-[#a52020] mb-2">Freedom</div>
@@ -973,8 +934,7 @@ linear-gradient(to bottom, rgba(114, 21, 21, 0.1) 1px, transparent 1px);
 
                 <article class="blog-card group bg-[#0a0a0a] border border-white/5 rounded-2xl overflow-hidden cursor-pointer hover:border-[#721515]/30 transition-all duration-300" data-blog="4">
                     <div class="h-52 relative overflow-hidden">
-                        <img src="https://picsum.photos/seed/nervous/400/300" alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/40 to-transparent"></div>
+                        <img src="sexual-consent.png" alt="The Power of Sexual Consent" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-5">
                         <div class="text-[10px] uppercase tracking-widest text-[#a52020] mb-2">Sovereignty</div>
@@ -986,8 +946,7 @@ linear-gradient(to bottom, rgba(114, 21, 21, 0.1) 1px, transparent 1px);
 
                 <article class="blog-card group bg-[#0a0a0a] border border-white/5 rounded-2xl overflow-hidden cursor-pointer hover:border-[#721515]/30 transition-all duration-300" data-blog="5">
                     <div class="h-52 relative overflow-hidden">
-                        <img src="https://picsum.photos/seed/mystical/400/300" alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/40 to-transparent"></div>
+                        <img src="public/images/happy-vibes.png" alt="Happy Vibes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-5">
                         <div class="text-[10px] uppercase tracking-widest text-[#a52020] mb-2">Joy</div>
@@ -999,8 +958,7 @@ linear-gradient(to bottom, rgba(114, 21, 21, 0.1) 1px, transparent 1px);
 
                 <article class="blog-card group bg-[#0a0a0a] border border-white/5 rounded-2xl overflow-hidden cursor-pointer hover:border-[#721515]/30 transition-all duration-300" data-blog="6">
                     <div class="h-52 relative overflow-hidden">
-                        <img src="https://picsum.photos/seed/waterbucket/400/300" alt="Water bucket" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/40 to-transparent"></div>
+                        <img src="public/images/water-bucket.png" alt="Don't Be a Water Bearer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-5">
                         <div class="text-[10px] uppercase tracking-widest text-[#a52020] mb-2">Liberation</div>
@@ -1012,8 +970,7 @@ linear-gradient(to bottom, rgba(114, 21, 21, 0.1) 1px, transparent 1px);
 
                 <article class="blog-card group bg-[#0a0a0a] border border-white/5 rounded-2xl overflow-hidden cursor-pointer hover:border-[#721515]/30 transition-all duration-300" data-blog="7">
                     <div class="h-52 relative overflow-hidden">
-                        <img src="https://picsum.photos/seed/flame/400/300" alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/40 to-transparent"></div>
+                        <img src="public/images/orchard.png" alt="Bad Male Behavior" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-5">
                         <div class="text-[10px] uppercase tracking-widest text-[#a52020] mb-2">Patriarchy</div>
@@ -1025,8 +982,7 @@ linear-gradient(to bottom, rgba(114, 21, 21, 0.1) 1px, transparent 1px);
 
                 <article class="blog-card group bg-[#0a0a0a] border border-white/5 rounded-2xl overflow-hidden cursor-pointer hover:border-[#721515]/30 transition-all duration-300" data-blog="8">
                     <div class="h-52 relative overflow-hidden">
-                        <img src="https://picsum.photos/seed/mother/400/300" alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/40 to-transparent"></div>
+                        <img src="public/images/womanpower.png" alt="Mother Knows Best" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-5">
                         <div class="text-[10px] uppercase tracking-widest text-[#a52020] mb-2">Matriarchy</div>
@@ -1038,8 +994,7 @@ linear-gradient(to bottom, rgba(114, 21, 21, 0.1) 1px, transparent 1px);
 
                 <article class="blog-card group bg-[#0a0a0a] border border-white/5 rounded-2xl overflow-hidden cursor-pointer hover:border-[#721515]/30 transition-all duration-300" data-blog="9">
                     <div class="h-52 relative overflow-hidden">
-                        <img src="https://picsum.photos/seed/mirror/400/300" alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/40 to-transparent"></div>
+                        <img src="public/images/happy-girl.png" alt="You Have YOU" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-5">
                         <div class="text-[10px] uppercase tracking-widest text-[#a52020] mb-2">Self</div>
@@ -1051,8 +1006,7 @@ linear-gradient(to bottom, rgba(114, 21, 21, 0.1) 1px, transparent 1px);
 
                 <article class="blog-card group bg-[#0a0a0a] border border-white/5 rounded-2xl overflow-hidden cursor-pointer hover:border-[#721515]/30 transition-all duration-300" data-blog="10">
                     <div class="h-52 relative overflow-hidden">
-                        <img src="https://picsum.photos/seed/sunlight/400/300" alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/40 to-transparent"></div>
+                        <img src="public/images/happy.png" alt="What Is Happiness?" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-5">
                         <div class="text-[10px] uppercase tracking-widest text-[#a52020] mb-2">Philosophy</div>
@@ -1065,6 +1019,92 @@ linear-gradient(to bottom, rgba(114, 21, 21, 0.1) 1px, transparent 1px);
             </div>
         </div>
     </section>
+
+    <!-- Chapter Playlists Carousel -->
+    <section id="playlists" class="py-24 md:py-32 px-6 md:px-12 relative z-20 border-t border-white/5 bg-[#020202] overflow-hidden">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <div class="text-xs font-medium uppercase tracking-widest text-[#a52020] mb-4">The Soundtrack to Your Liberation</div>
+                <h3 class="text-4xl md:text-5xl font-headline font-bold text-[#F4EFE6]">Chapter Playlists</h3>
+            </div>
+
+            <div class="relative">
+                <div id="playlistCarousel" class="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-6 -mx-2 px-2" style="scrollbar-width: none; -ms-overflow-style: none;">
+                </div>
+
+                <!-- Carousel navigation arrows -->
+                <button onclick="document.getElementById('playlistCarousel').scrollBy({left: -340, behavior: 'smooth'})" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-10 h-10 rounded-full bg-[#0a0a0a] border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:border-[#721515]/40 transition-all hidden md:flex">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                </button>
+                <button onclick="document.getElementById('playlistCarousel').scrollBy({left: 340, behavior: 'smooth'})" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-10 h-10 rounded-full bg-[#0a0a0a] border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:border-[#721515]/40 transition-all hidden md:flex">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+    (function() {
+        const spotSvg = '<img src="public/images/spotify-logo.png" alt="Spotify" width="20" height="20" style="border-radius:3px">';
+        const appleSvg = '<img src="public/images/apple-music-logo.png" alt="Apple Music" width="16" height="16" style="border-radius:3px">';
+        const chapters = [
+            { step: 1, title: 'Leave the House', songs: [
+                ['Freedom', 'Beyoncé', '7aBxcRw77817BrkdPChAGY', '1460432160'], ['Yes, and', 'Ariana Grande', '7gaA3wERFkFkgivjwbSvkG', '1724584201'], ['IDGAF', 'Dua Lipa', '746hm0IRjLQutGAFVlu4aI', '1434849485'], ['Woman', 'Kesha', '1kJtfldK9F7XmsSiSNlbth', '1253688429'], ['I Like That', 'Janelle Monáe', '2EznBGrlmx9wBeYgyDojsA', '1616607604'], ['Dead Men Don\'t Rape', 'Delilah Bon', '0y3aIB5JiHNhJLSGhLdHoJ', '1716390451'], ['Not All Men', 'Morgan St. Jean', '7jpB3Yek9FbrFZuYvTPrJp', '1598928861'], ['Martyr', 'KiNG MALA', '4BaYa88YtE0WBDVKfTeUTP', '1645971851'], ['Diamond Heart', 'Lady Gaga', '45CPhDilfgK14IE7LbNvPh', '1440895562'], ['Purity', 'Lilyisthatyou', '1BV7YtzsoKAF2cULDHLe2K', null]
+            ]},
+            { step: 2, title: 'The Art of No', songs: [
+                ['Know No', 'Chinchilla', '3D7ecqj5px7RSfwmpOLkm8', '1656731601'], ['thank u, next', 'Ariana Grande', '2rPE9A1vEgShuZxxzR2tZH', '1450334169'], ['My House', 'Beyoncé', '7omJfT9s6V2IpQNBYyq5C8', '1719203133'], ['FOH', 'iyla', '35ejSuecREMgIdncECvv1o', '1632519976'], ['Cinderella Snapped', 'Jax', '3udCid1W2whR6CQrVpsKUh', '1669564235'], ['Man\'s World', 'MARINA', '2XWusA74Rg68E23sVOfBlK', '1596763096']
+            ]},
+            { step: 3, title: 'Quit Church', songs: [
+                ['Never Gonna Not Dance Again', 'P!nk', '6sZo5nJIsFWXefRCCexpx0', '1652351453'], ['Church Girl', 'Beyoncé', '2mqTtvbKxH7SoEQ2oGAnsA', '1630005856'], ['God is a Woman', 'Ariana Grande', '5OCJzvD7sykQEKHH7qAC3C', '1399202954'], ['Thank Goddess', 'Qveen Herby', '27IubiEgQJczAE6OC7PgmQ', '1668491468'], ['Boys Will Be Boys', 'Dua Lipa', '0vQcyuMEfRBd21ojZ62N2L', '1799675679']
+            ]},
+            { step: 4, title: 'Make Money', songs: [
+                ['Energy', 'Beyoncé', '0314PeD1sQNonfVWix3B2K', '1630005852'], ['Money', 'Cardi B', '1ozkUXjTicFlTvrmdYmLDj', '1439777400'], ['My Power', 'Beyoncé ft. various', '7ia5l12mCvbQTeAnG1oYpg', '1473487844'], ['Bitch Better Have My Money', 'Rihanna', '0NTMtAO2BV4tnGvw9EgBVq', '1445136075'], ['Marie Antoinette', 'Qveen Herby', '6UvLJHsIP0ycuNYpTh4RyW', '1668491472'], ['Circus', 'Britney Spears', '7jk7gqyEonmVVYahZN5zhW', '1744455689'], ['Players', 'Coi Leray', '6UN73IYd0hZxLi8wFPMQij', '1656138318']
+            ]},
+            { step: 5, title: 'Take a Lover', songs: [
+                ['Formation', 'Beyoncé', '6g0Orsxv6glTJCt4cHsRsQ', '1460430757'], ['Small Town Scandal', 'Zolita', '56yiEEYcSMw27ujiSyVzCS', null], ['Sweetest Pie', 'Megan Thee Stallion & Dua Lipa', '7mFj0LlWtEJaEigguaWqYh', '1613376653'], ['YA YA', 'Beyoncé', '0K9tfzrxJyCQIf7oAlPwaK', '1738364001'], ['Super Freaky Girl', 'Nicki Minaj', '4C6Uex2ILwJi9sZXRdmqXp', '1720307671'], ['When Will I Be Mine?', 'Hailey Orion', '2z2h4q7svGf3Wts5VUoaC2', null], ['Women Don\'t Owe You Shit', 'ASTON', '6HoZUmprRfFWO1CaqkiBUP', null]
+            ]},
+            { step: 6, title: 'Meet Your Vagina', songs: [
+                ['PURE/HONEY', 'Beyoncé', '4DByEumlGTZKSzuVEZ35eo', '1630006146'], ['I Got the Juice', 'Janelle Monáe ft. Pharrell', '5Yfq9uugLFchtFymQQWxgt', '1350021468'], ['Juicy', 'Doja Cat', '4cTm3Ev9bUvy4ChJjB1nhl', '1453882731'], ['Freak', 'Doja Cat', '3aA6xB0tOilDDX17fIJ0Bl', '1525911584'], ['THIQUE', 'Beyoncé', '5pBl6aDQqw0b0O0t640BUB', '1630005868']
+            ]},
+            { step: 7, title: 'Your Internalized Misogyny', songs: [
+                ['Best Friend', 'Saweetie & Doja Cat', '20BOju91NaEFK5Py4VJ2pp', '1563240045'], ['Her', 'Megan Thee Stallion', '5hHvFrMnwic82WwRLr4WY0', '1639431051'], ['All My Girls Like to Fight', 'Hope Tala', '6rCuplMDiFQVSca77OQocz', '1531410975'], ['Flawless', 'Beyoncé', '7tefUew2RUuSAqHyegMoY1', '939783796'], ['little miss misogyny', 'audalei', '6uKxavyhKpvneaIAx0ve4D', '1711593810'], ['brutal', 'Olivia Rodrigo', '6SRsiMl7w1USE4mFqrOhHC', '1560735419'], ['Grigio Girls', 'Lady Gaga', '6Xxvdy1m9TX9HTxOzQcfuV', '1440866673']
+            ]},
+            { step: 8, title: 'Righteous F---ing Indignation', songs: [
+                ['You Make Me Sick!', 'Ashnikko', '2cK6tRFd7PRPFY1ZwJAKeq', '1665960524'], ['When Will I Be Mine?', 'Hailey Orion', '2z2h4q7svGf3Wts5VUoaC2', null], ['STUPID!', 'Ashnikko', '4Pjolgpy6UOB79DNjWwM6n', '1485574264'], ['Labour', 'Paris Paloma', '2Ggr9IfS70wYQacW8nZKPG', '1674879949'], ['Don\'t Hurt Yourself', 'Beyoncé', '78eouBKVRyhbSzJwChr6QM', '1460432020'], ['Little Girl Gone', 'Chinchilla', '56rpEOCBATYItSa4yPksfe', '1704009103'], ['what it means to be a girl', 'EMELINE', '6os3eatWJO9g6Wo4b8KfRn', null]
+            ]},
+            { step: 9, title: 'Know Better, Be Better, Do Better', songs: [
+                ['yes, and', 'Ariana Grande', '7gaA3wERFkFkgivjwbSvkG', '1724584201'], ['Freedom', 'Beyoncé', '7aBxcRw77817BrkdPChAGY', '1460432160'], ['Persuasive', 'Doechii & SZA', '67v2UHujFruxWrDmjPYxD6', '1736603877'], ['Survivor', 'Snoblack', '3vLcZ9qGGievHuvF8a4DRt', null], ['Pretty Girl Magic', 'Moonlight Scorpio', '2wyTXeOglzHft0ncA99ANo', '1676591169'], ['Medicine Woman', 'Qveen Herby', '0yUEDpCxtrX83EwkcY4FEl', '1825483324']
+            ]},
+            { step: 10, title: 'Come to Jesus', songs: [
+                ['Labour', 'Paris Paloma', '2Ggr9IfS70wYQacW8nZKPG', '1674879949'], ['Haute', 'Janelle Monáe', '24bEwUPOs8rqAa8N8fH1dU', '1686979054'], ['Flowers', 'Miley Cyrus', '0yLdNVWF3Srea0uzk55zFn', '1702906535'], ['I AM WOMAN', 'Emmy Meli', '3nOz1U41SZZ0N3fuUWr9nb', '1636015213'], ['Mother\'s Daughter', 'Miley Cyrus', '0mpEv6FoGoLhJgUKI8P9Kh', '1689672234'], ['War on Women', 'Delilah Bon', '1O9NswTUxuvys3xUa81MkJ', '1716389653'], ['Emotional Punching Bag', 'Meg Smith', '7yPgfPvs6aZ5EJ1ofwfpwL', null]
+            ]},
+            { step: 11, title: 'In Charge of Happy', songs: [
+                ['Run the World', 'Beyoncé', '1uXbwHHfgsXcUKfSZw5ZJ0', '626205874'], ['Pretty Girls Walk', 'Big Boss Vette', '646pXmilpKaPZIjgHzwPhR', '1631461037'], ['I Am', 'Baby Tate ft. Flo Milli', '0y22KKdjAYJIWywFAH4UPU', '1541224138'], ['Sad Bitch Bad Bitch', 'iyla', '4IoytfdZdeZNcv2e4mvrcD', '1613800416'], ['Marie Antoinette', 'Qveen Herby', '6UvLJHsIP0ycuNYpTh4RyW', '1668491472']
+            ]}
+        ];
+        const el = document.getElementById('playlistCarousel');
+        chapters.forEach(ch => {
+            const songList = ch.songs.map(s => {
+                const q = encodeURIComponent(s[0] + ' ' + s[1]);
+                const spotifyUrl = s[2] ? 'https://open.spotify.com/track/' + s[2] : 'https://open.spotify.com/search/' + q;
+                const appleUrl = s[3] ? 'https://music.apple.com/us/song/' + s[3] : 'https://music.apple.com/us/search?term=' + q;
+                return `<li class="flex items-center justify-between gap-2 py-1.5 border-b border-black/5 last:border-0">
+                    <span class="text-sm text-black/60 font-light truncate">${s[0]} <span class="text-black/30">— ${s[1]}</span></span>
+                    <span class="flex gap-1.5 shrink-0">
+                        <a href="${spotifyUrl}" target="_blank" title="Play on Spotify" class="hover:opacity-70 transition-opacity">${spotSvg}</a>
+                        <a href="${appleUrl}" target="_blank" title="Play on Apple Music" class="hover:opacity-70 transition-opacity">${appleSvg}</a>
+                    </span>
+                </li>`;
+            }).join('');
+            el.innerHTML += `<div class="snap-start shrink-0 w-[320px] bg-white border border-black/8 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+                <div class="text-[10px] uppercase tracking-widest text-[#a52020] mb-2">Step ${ch.step}</div>
+                <h4 class="font-headline text-lg text-[#1a1a1a] mb-1 font-medium">${ch.title}</h4>
+                <p class="text-xs text-black/30 mb-4">${ch.songs.length} tracks</p>
+                <ul class="mb-0">${songList}</ul>
+            </div>`;
+        });
+    })();
+    </script>
 
     <!-- Newsletter CTA -->
     <section id="newsletter" class="relative z-20 overflow-hidden">
@@ -1090,7 +1130,7 @@ linear-gradient(to bottom, rgba(114, 21, 21, 0.1) 1px, transparent 1px);
                             <span class="text-xs font-medium uppercase tracking-widest text-[#a52020]">Join the Movement</span>
                         </div>
 
-                        <h3 class="newsletter-title font-headline text-4xl md:text-5xl lg:text-[3.4rem] text-[#F4EFE6] mb-6 tracking-tight leading-[1.1]">Get the Goodies.</h3>
+                        <h3 class="newsletter-title font-headline text-4xl md:text-5xl lg:text-[3.4rem] text-[#F4EFE6] mb-6 leading-[1.1]">Get the Goodies.</h3>
 
                         <p class="newsletter-desc text-lg text-white/50 font-light leading-relaxed mb-10 max-w-md">
                             Unlock the book companion materials — playlists, discussion cards, and more — delivered free to your inbox every month.
@@ -1142,7 +1182,7 @@ linear-gradient(to bottom, rgba(114, 21, 21, 0.1) 1px, transparent 1px);
                                     <div class="w-16 h-16 rounded-2xl bg-[#721515]/10 border border-[#721515]/20 flex items-center justify-center mx-auto mb-5">
                                         <iconify-icon icon="solar:fire-bold-duotone" class="text-3xl text-[#a52020]"></iconify-icon>
                                     </div>
-                                    <h4 class="newsletter-form-title font-headline text-2xl text-[#F4EFE6] mb-2 tracking-tight">Get In. Stay Lit.</h4>
+                                    <h4 class="newsletter-form-title font-headline text-2xl text-[#F4EFE6] mb-2">Get the Newsletter</h4>
                                     <p class="newsletter-form-desc text-sm text-white/40 font-light">Free. Unsubscribe anytime. No spam, ever.</p>
                                 </div>
 
@@ -1154,22 +1194,11 @@ linear-gradient(to bottom, rgba(114, 21, 21, 0.1) 1px, transparent 1px);
                                         <input type="email" placeholder="Email address" required class="newsletter-input w-full px-5 py-3.5 rounded-xl bg-white/[0.04] border border-white/[0.08] text-white text-sm placeholder:text-white/25 focus:outline-none focus:border-[#721515]/40 focus:bg-white/[0.06] transition-all">
                                     </div>
                                     <button type="submit" class="w-full py-4 rounded-xl bg-[#721515] border border-[#721515]/30 text-white font-medium text-sm uppercase tracking-widest hover:bg-[#a52020] transition-all duration-300 relative overflow-hidden group">
-                                        <span class="newsletter-btn-text relative z-10">Join the Movement</span>
+                                        <span class="newsletter-btn-text relative z-10">Get the Newsletter</span>
                                         <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
                                     </button>
                                 </form>
 
-                                <div class="flex items-center justify-center gap-6 mt-8 pt-6 border-t border-white/[0.06]">
-                                    <a href="#" class="newsletter-platform-link flex items-center gap-2 text-white/30 hover:text-[#1DB954] transition-colors">
-                                        <iconify-icon icon="mdi:spotify" class="text-xl"></iconify-icon>
-                                        <span class="text-xs font-medium uppercase tracking-wider">Spotify</span>
-                                    </a>
-                                    <div class="w-px h-4 bg-white/10"></div>
-                                    <a href="#" class="newsletter-platform-link flex items-center gap-2 text-white/30 hover:text-[#FA2D48] transition-colors">
-                                        <iconify-icon icon="mdi:apple" class="text-xl"></iconify-icon>
-                                        <span class="text-xs font-medium uppercase tracking-wider">Apple Music</span>
-                                    </a>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -1194,7 +1223,7 @@ linear-gradient(to bottom, rgba(114, 21, 21, 0.1) 1px, transparent 1px);
                 <div class="sticky top-0 z-20 bg-[#F4EFE6]/95 backdrop-blur-md border-b border-[#721515]/10 px-6 md:px-10 py-4 flex items-center justify-between">
                     <div>
                         <div class="text-[10px] font-medium uppercase tracking-[0.2em] text-[#721515]/60">Excerpt</div>
-                        <div class="text-sm font-headline text-[#1a1a1a] tracking-tight">11 Steps to Leaving Your Daddy</div>
+                        <div class="text-sm font-headline text-[#1a1a1a]">11 Steps to Leaving Your Daddy</div>
                     </div>
                     <button onclick="document.getElementById('excerptModal').classList.add('opacity-0','pointer-events-none');document.getElementById('excerptModalContent').classList.add('scale-95');document.body.style.overflow='';" class="w-10 h-10 rounded-full bg-[#721515]/5 border border-[#721515]/10 flex items-center justify-center text-[#721515]/60 hover:text-[#721515] hover:bg-[#721515]/10 transition-all">
                         <iconify-icon icon="solar:close-circle-linear" class="text-xl"></iconify-icon>
@@ -1211,7 +1240,7 @@ linear-gradient(to bottom, rgba(114, 21, 21, 0.1) 1px, transparent 1px);
                             <iconify-icon icon="solar:book-2-linear" class="text-2xl text-[#721515]/40"></iconify-icon>
                             <div class="h-px w-12 bg-[#721515]/20"></div>
                         </div>
-                        <h3 class="font-headline text-3xl md:text-4xl text-[#1a1a1a] tracking-tight mb-3">Step 1</h3>
+                        <h3 class="font-headline text-3xl md:text-4xl text-[#1a1a1a] mb-3">Step 1</h3>
                         <p class="font-headline text-lg text-[#721515]/70 uppercase tracking-widest">Leave the House</p>
                     </div>
 
@@ -1284,11 +1313,11 @@ linear-gradient(to bottom, rgba(114, 21, 21, 0.1) 1px, transparent 1px);
     <!-- Blog Modal -->
     <div id="blogModal" class="fixed inset-0 z-[100] flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300">
         <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" id="blogModalOverlay"></div>
-        <div class="relative w-full max-w-2xl max-h-[85vh] mx-4 bg-[#0a0a0a] border border-white/10 rounded-2xl overflow-hidden transform scale-95 transition-transform duration-300" id="blogModalContent">
-            <button id="blogModalClose" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:bg-white/10 transition-all">
-                <iconify-icon icon="solar:close-circle-linear" class="text-xl"></iconify-icon>
+        <div class="relative w-[90vw] max-h-[92vh] mx-4 bg-white border border-black/10 rounded-2xl overflow-hidden transform scale-95 transition-transform duration-300" id="blogModalContent">
+            <button id="blogModalClose" class="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-white shadow-lg border border-black/10 flex items-center justify-center text-black/70 hover:text-black hover:bg-black/5 transition-all cursor-pointer">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
             </button>
-            <div class="overflow-y-auto max-h-[85vh] p-8 md:p-12" id="blogModalBody">
+            <div class="overflow-y-auto max-h-[92vh] p-8 md:p-12" id="blogModalBody">
                 <!-- Content injected by JS -->
             </div>
         </div>
@@ -1401,126 +1430,164 @@ linear-gradient(to bottom, rgba(114, 21, 21, 0.1) 1px, transparent 1px);
         // Blog articles data
         const blogArticles = [
             {
+                image: 'daddyship.png',
+                imagePos: 'center 20%',
                 category: 'Freedom',
                 title: 'Jumping Off the Daddyship',
                 date: 'January 15, 2025',
-                body: `<p>The Daddyship is the vessel you were born on. It's the family system, the belief structure, the economic arrangement, the emotional contract that was signed on your behalf before you could speak. You didn't choose it. You didn't design it. But you've been sailing on it your whole life — and at some point, you looked over the railing and thought: I don't want to be on this boat anymore.</p>
-                <p>Jumping off the Daddyship is terrifying. The ship is familiar. You know where the galley is, where the lifeboats are stored, how to navigate the captain's moods. You've spent years — maybe decades — learning the rules, avoiding the storms, keeping your head down. The water below looks cold, dark, and endless. Why would anyone jump?</p>
-                <p>Because the ship is going somewhere you don't want to go. Because the captain's course was never yours. Because somewhere deep inside, beneath the seasickness and the survival strategies, there's a voice whispering: this isn't my life. This is his life. I'm just crew.</p>
-                <p>The jump itself is the hardest part. Not the swimming — you'll figure that out. Not the cold — you'll adjust. The hardest part is letting go of the railing. Releasing your grip on everything that's familiar, even when familiar means miserable. Because misery you understand feels safer than freedom you don't.</p>
-                <p>But here's what no one tells you about the water: it holds you. Once you're in it, once you've let go and taken the plunge, you discover that you can float. You can swim. You can build your own damn boat. And the further you get from the Daddyship, the smaller it looks — and the bigger you feel.</p>
-                <p>Jump. The water is warmer than you think. And you were never meant to be a passenger on someone else's voyage.</p>`
+                body: `<p>Girl, the Daddyship is the boat you were born on. You didn't buy a ticket. You didn't pick the destination. Daddy was the captain, and everybody onboard — Mama included — was sailing his course. The family rules, the religion, the money situation, whose dreams got funded and whose got a pat on the head — all of it was decided before you could talk. And for a long time, that was just... life. You didn't question the boat because you didn't know there was an ocean.</p>
+                <p>But then you looked over the railing.</p>
+                <p>Maybe it was a fight. Maybe it was a quiet Tuesday where something cracked open inside you and a still, small voice whispered: <em>This isn't mine. None of this is mine.</em> Maybe you've been hearing that voice for years and stuffing it down with busyness and wine and being a good girl. Your gut has been trying to tell you something, yeah?</p>
+                <p>Ask your gut. She knows.</p>
+                <p>Here's the thing about the Daddyship — it's familiar. You know where everything is. You know how to read Daddy's moods, how to duck when the storms hit, how to keep the peace and pass the nachos and smile like everything's fine. You've been navigating this vessel your whole life. And the water below? It looks cold. Dark. Endless. Your inner damsel is screaming: <em>What if you drown? What if nobody rescues you? What if you can't afford Botox!?</em></p>
+                <p>Remind that little girl inside you that you have always been there for her. You — above everyone else — have shown up for her every single day. You are the Love of Your Life. Not Daddy. Not the captain. Not the ship. You.</p>
+                <p>So why jump? Because the ship is going somewhere you don't want to go. Because Daddy's course was never yours. Because you've been crew on somebody else's voyage long enough, and your shoulders are tired and your belly is in knots and you're done — <em>done</em> — asking for permission to exist.</p>
+                <p>The jump is the hardest part. Not the swimming — you'll figure that out, trust me. Not the cold — your nervous system will recalibrate. The hardest part is releasing your grip on that railing. Letting go of everything familiar, even when familiar means miserable. Because misery you understand feels safer than freedom you don't.</p>
+                <p>But here's what nobody tells you about the water: it holds you. Mother Nature holds you. Once you let go and take the plunge, you discover something wild — you can float. You can swim. You can build your own damn boat. And the further you get from the Daddyship, the smaller it looks.</p>
+                <p>And the bigger you feel.</p>
+                <p>Jump, sister. The water is warmer than you think. And you were never, <em>ever</em> meant to be a passenger on someone else's voyage. You are the captain now. Feel free to dance naked on the deck.</p>`
             },
             {
+                image: 'power-of-no.png',
                 category: 'Boundaries',
                 title: 'I Won\'t Be Able to Do That: The Power of No',
                 date: 'February 3, 2025',
-                body: `<p>"I won't be able to do that." Seven words. No apology. No excuse. No softening. Just a clear, clean boundary dropped like a velvet hammer. And yet for most women, saying those words feels like stepping off a cliff.</p>
-                <p>We've been trained since birth to accommodate. To say yes when we mean no. To rearrange our lives around other people's needs, schedules, expectations, and egos. Saying no — real, undecorated no — was never part of the curriculum. What we got instead was: be nice, be helpful, be available, be agreeable. Be anything but inconvenient.</p>
-                <p>But here's the thing about "no" — it's not a rejection of the other person. It's a recognition of yourself. Every no is a yes to something else: your time, your energy, your sanity, your right to exist without performing availability as a personality trait.</p>
-                <p>The patriarchy taught us that a woman who says no is difficult. Cold. Selfish. Bitchy. But a man who says no? He's decisive. He has boundaries. He knows his worth. See the game? The rules were never about politeness. They were about control. A woman who can say no is a woman who can't be managed.</p>
-                <p>"I won't be able to do that" doesn't owe anyone an explanation. It doesn't need a reason, a rain check, or a replacement volunteer. It is a complete sentence. Practice it. Say it in the mirror. Say it to the PTA, to your mother-in-law, to your boss, to the voice in your head that insists you're being selfish.</p>
-                <p>You're not being selfish. You're being sovereign. And sovereignty starts with the most powerful two-letter word in the English language.</p>`
+                body: `<p>"I won't be able to do that." Say it out loud. Go ahead — right now. Feel that? That little jolt in your chest? That's your conditioning throwing a tantrum because you just broke the rules.</p>
+                <p>What happened to you after you were two years old? At two, you were <em>excellent</em> at saying no. "No!" was your whole personality. The terrible twos — remember? That was you, exercising your God-given right to decline. But somewhere between pigtails and prom, the "no" got trained out of you. Replaced with: Be sweet. Be helpful. Bring Daddy a beer. Smile, baby. Good girl.</p>
+                <p>Sound familiar? Yeah.</p>
+                <p>Research actually determined the magic phrase that gets you off the hook: <em>I won't be able to do that.</em> Not "I can't" — people will try to talk you out of "can't." But "I won't be able to do that"? They accept it. It's a closed door with a deadbolt. Practice it in front of a mirror — seriously, this lights up new neural pathways and makes it easier to say next time. The Art of No is a skill, and like any skill, you get better with reps.</p>
+                <p>Here's what Daddy never told you: a man who says no is "decisive." A woman who says no is "difficult." See the game? The rules were never about politeness. They were about control. A woman who can say no is a woman who can't be managed. And that terrifies the patriarchy.</p>
+                <p>Because saying no to Daddy is saying <em>yes</em> to You — the only person in charge of your happiness. Whatever you do, don't feel guilty for it. Feeling guilty for taking care of yourself is straight from the patriarchal mindset. How dare you put anything before Daddy? (Eye roll.)</p>
+                <p>So say it. To the PTA, to your mother-in-law, to your boss, to the man-child who wants nachos, to the voice in your head that insists you're being selfish. You're not being selfish. You're being the Love of Your Life. And that starts with the most powerful two-letter word in the English language.</p>`
             },
             {
+                image: 'helen-keller.jpg',
+                imagePos: 'center 30%',
                 category: 'Spirituality',
                 title: 'Helen Keller Spirituality',
                 date: 'February 20, 2025',
-                body: `<p>Helen Keller couldn't see. She couldn't hear. And yet she perceived more about the nature of reality than most people who have both faculties fully intact. "The best and most beautiful things in the world cannot be seen or even touched," she wrote. "They must be felt with the heart."</p>
-                <p>We live in a culture that worships the visible, the measurable, the provable. If you can't see it on a screen, graph it on a chart, or cite it in a peer-reviewed journal, it doesn't count. Spirituality — real spirituality, not the performative kind — has been dismissed as "woo-woo," as feminine nonsense, as the territory of the unserious.</p>
-                <p>But Helen Keller knew something the patriarchy has spent centuries trying to suppress: that the most important truths are invisible. That knowing isn't limited to the intellect. That there is a form of perception that doesn't require eyes or ears — a felt sense, an inner knowing, an intelligence that lives in the body and the soul.</p>
-                <p>Women have always had access to this knowing. Intuition. Gut feeling. The quiet voice that says something is wrong before the evidence arrives. The patriarchy called it hysteria. Science called it anecdotal. Religion called it dangerous. But it never went away. It just went underground.</p>
-                <p>Helen Keller's spirituality wasn't about religion or dogma. It was about trust — trust in what she could feel even when she couldn't verify it through conventional senses. That is the invitation for every woman reclaiming her sovereignty: to trust what you know, even when the world tells you it doesn't count.</p>
-                <p>Your inner knowing is not woo-woo. It is wisdom. And it has been waiting — patiently, faithfully — for you to stop apologizing for it and start listening.</p>`
+                body: `<p>Before Helen Keller was two years old, she lost the ability to see, hear, and speak. Trapped inside herself. No images, no sounds, no language. Just... sensation. The touch of her fingers, the smells, the <em>feels</em>. And yet — when asked years later about her belief in God — she said she became aware of It early in life through sensory experiences in nature. She didn't know what It was called, but she knew It was there. She could feel Its presence.</p>
+                <p>Without Sunday School.</p>
+                <p>Let that sink in for a second. A woman who couldn't see or hear perceived more about the nature of reality than most people with both faculties fully intact. No preacher told her about God. No Daddy explained the rules. She <em>felt</em> it — through Mother Nature's rhythms, through touch, through the force of love that permeates everything alive.</p>
+                <p>And here's the thing that should make you furious: the patriarchy has spent centuries trying to suppress exactly this kind of knowing. Women have always had access to it — intuition, gut feeling, that quiet voice that tells you something is wrong before the evidence arrives. The patriarchy called it hysteria. Science called it anecdotal. Religion called it dangerous. But it never went away. It just went underground.</p>
+                <p>Your gut knows, yeah? She's been trying to tell you things your whole life. That relationship that felt off. That job that was draining your soul. That moment in church when something didn't sit right but you pushed it down because Daddy said so and the pastor said so and everybody said so.</p>
+                <p>Ask your gut. She knows.</p>
+                <p>You don't need the stories from Daddy's perspective to have a connection to the divine. Like Helen Keller, you can feel it — the force, the energy, the Love — without anybody's permission or interpretation. Your inner knowing is not woo-woo. It is wisdom. And it has been waiting, patiently and faithfully, for you to stop apologizing for it and start listening.</p>
+                <p>Goddamn, Helen. Yes.</p>`
             },
             {
+                image: 'financial-freedom.png',
+                imagePos: 'center 20%',
                 category: 'Freedom',
                 title: 'Financial Self-Sufficiency',
                 date: 'March 8, 2025',
-                body: `<p>Nobody tells you that money is the lock on the cage. Not the only lock — but the one that keeps everything else in place. You can have the clarity, the courage, the burning desire to leave. But if you can't pay your own rent, you stay. That's not a personal failing. That's by design.</p>
-                <p>The patriarchy has always understood that economic dependence is the most efficient form of control. You don't need chains when someone controls the bank account. You don't need threats when the alternative to compliance is homelessness, poverty, or losing custody of your children. Financial dependence is the invisible fence that keeps women in marriages, jobs, and family systems that are slowly destroying them.</p>
-                <p>Making your own money changes everything. Not because money is the point — but because money is the exit. It's the apartment you can sign a lease on. It's the lawyer you can retain. It's the plane ticket, the new phone number, the life that exists on the other side of "I can't afford to leave."</p>
-                <p>And here's what they don't want you to know: you can do it. You can learn a trade, start a business, get a certification, negotiate a raise, open your own account. Women have been told for centuries that financial matters are too complicated, too stressful, too masculine for them. That's not protection — that's propaganda.</p>
-                <p>Every dollar you earn is a vote for your own autonomy. Every dollar you save is a brick in the foundation of your freedom. Financial self-sufficiency isn't about greed or materialism. It's about never having to ask permission to exist on your own terms.</p>
-                <p>Make money. Your own money. Money that nobody can take away, threaten to withhold, or use as leverage against your dignity. That's not selling out. That's buying in — to yourself.</p>`
+                body: `<p>Exerting financial power is Daddy's favorite control technique. It permeates marriages and relationships worldwide, not to mention entire governments. The Vatican is the 18th wealthiest country in the world — all men, pure patriarchy, right down to the sexual abuse, misogyny, and lies. You can buy a ticket to tour their museum and pick up a souvenir rosary. Remember how Jesus reacted to the sellers in the Temple? He was not a fan.</p>
+                <p>Nobody tells you that money is the lock on the cage. You can have the clarity, the courage, the burning desire to leave. But if you can't pay your own rent? You stay. That's not a personal failing. That's by design.</p>
+                <p>Making enough money to support yourself is crucial. It's your first goal after jumping off the Daddyship. Whether you've got a four-year degree, a professional certification, entrepreneurial chops, or you're learning to be an electrician or a welder — investing in yourself opens doors. Break outside the box, think outside the box, and stand on the box!</p>
+                <p>Don't want a traditional degree? No worries! Certifications abound for women outside traditional gender roles. Got an idea for a business? Launch it. Experience in a career field will fuel your autonomy and ignite the fire of your independence. Working to support yourself is a source of pride, and having that career as you settle into your own place? That's the first real taste of freedom.</p>
+                <p>Leaving a marriage? Lawyer up, sister! Daddy isn't the boss of you. Or your divorce. Take your 50%. Waive nothing. Watch how Daddy morphs when faced with losing control — the tantrums, the threats, the theatrics. Don't allow him to dissuade you from representation. True colors show when you're no longer under his thumb. Even with economic independence, resist the impulse to sacrifice and comply as you probably did during your entire marriage.</p>
+                <p>Financial independence from any Daddy is imperative for your total freedom and autonomy. Every dollar you earn is a vote for the Love of Your Life. Every dollar you save is a brick in the foundation of your freedom. Make money. Your own money. Money that nobody can take away, threaten to withhold, or use as leverage against your dignity. Invest in You. Permit yourself to prioritize You.</p>
+                <p>You are the only one who can.</p>`
             },
             {
+                image: 'sexual-consent.png',
+                imagePos: 'center 30%',
                 category: 'Sovereignty',
                 title: 'The Power of Sexual Consent',
                 date: 'April 2, 2025',
-                body: `<p>Your body is not a compromise. It is not a negotiation. It is not something you owe anyone — not your partner, not your husband, not the person who bought you dinner, not the culture that taught you your value lives between your legs. Your body is yours. Full stop.</p>
-                <p>Consent is not the absence of "no." Consent is the enthusiastic, clear-eyed, freely given presence of "yes." And yet for centuries, women have been trained to treat their own sexual boundaries as suggestions — flexible, negotiable, secondary to someone else's desire. We've been taught that saying no is rejection. That hesitation is prudishness. That a good partner is an available partner, always.</p>
-                <p>This is not intimacy. This is colonization wearing a nightgown.</p>
-                <p>Real consent requires something the patriarchy has systematically denied women: the belief that your desire matters. Not his desire for you — your desire. Your wanting. Your timing. Your terms. The revolutionary act is not just saying no when you don't want something. It's learning to feel what you actually want in the first place — underneath the performance, the obligation, the fear of abandonment.</p>
-                <p>Many women have never experienced sex that begins with their own authentic desire because they were never taught they were allowed to have any. They learned to perform arousal, fake enjoyment, and prioritize his experience as if their own body were a stage set for someone else's show.</p>
-                <p>Reclaiming consent means reclaiming your body as your own territory. It means the radical act of pausing — even mid-moment — and asking yourself: do I want this? Not "should I," not "is he expecting it," not "will he be upset if I don't." Do I want this?</p>
-                <p>That question is the beginning of sexual sovereignty. And sexual sovereignty is the beginning of everything else.</p>`
+                body: `<p>Your body is not a compromise. It is not a negotiation. It is not something you owe anyone — not your partner, not your husband, not the guy who bought you dinner, not the culture that taught you your value lives between your legs. Your body is yours. Your pussy is yours. Your holy of holies.</p>
+                <p>Full stop.</p>
+                <p>Don't be a woman who doesn't give her vagina credit — or all the vaginas credit — for the hard work done throughout the centuries, birthing and nurturing mankind despite the stinging backlash of misogyny. Your lady parts are revered by mankind. The gateway to life and consciousness itself. Your power portal. Take a moment to let that sink in.</p>
+                <p>And yet — the patriarchy's job description for your body? Serve Daddy. Be available. Be his eye candy. Bear his children. Keep his dinner warm. Hand over the keys to your sacred portal like it's a rental property. If you were raised in Sunday School, you were brainwashed to believe that Eve screwed everything up and your body belongs to your husband. That's not love, that's a lease agreement.</p>
+                <p>Real consent isn't the absence of "no." It's the enthusiastic, clear-eyed, freely given presence of <em>yes</em>. YOUR yes. Not his expectation. Not your obligation. Not the fear of what happens if you don't. Many women have never experienced intimacy that begins with their own authentic desire because they were never taught they were allowed to have any. They learned to perform arousal, fake enjoyment, and prioritize his experience as if their own body were a stage set for someone else's show.</p>
+                <p>Learning to love and respect your vagina and becoming intentionally responsible for her maintenance is next-level self-care. Rescuing her from the patriarchal job description and wielding her power with discernment makes you unshakable. Sexual energy is creative energy. Harnessing it enhances creativity in every area of your life.</p>
+                <p>So here's the question, and only you can answer it: <em>Do I want this?</em> Not "should I." Not "is he expecting it." Not "will he be upset if I don't." Do. I. Want. This.</p>
+                <p>That question is the beginning of sexual sovereignty. And sexual sovereignty is the beginning of everything else. Decentering men is re-centering you. And with her help? Your creativity, your power, your whole damn life opens up.</p>`
             },
             {
+                image: 'public/images/happy-vibes.png',
                 category: 'Joy',
                 title: 'Happy Vibes',
                 date: 'April 19, 2025',
-                body: `<p>Here's something nobody tells you about leaving your daddy: after the rage, the grief, the reckoning, and the rebuilding — you're allowed to be happy. Not productive. Not healed. Not strong. Just happy. Stupidly, irresponsibly, unapologetically happy.</p>
-                <p>Women have been taught that happiness is frivolous. That serious women are busy, stressed, burdened by important things. That joy is for the naive, the privileged, the women who haven't woken up yet. But that's a trap too — the idea that awareness must come at the cost of lightness. That you can't be both awake and joyful. That liberation has to look like suffering.</p>
-                <p>It doesn't. Liberation looks like dancing in your kitchen at midnight. It looks like laughing so hard your mascara runs. It looks like buying yourself flowers for no reason, canceling plans because the sunset is too beautiful to miss, and choosing — actively, deliberately — to let yourself feel good.</p>
-                <p>Happy vibes aren't shallow. They're radical. In a world that profits from women's anxiety, insecurity, and exhaustion, choosing joy is an act of rebellion. Every smile that isn't performed for someone else's comfort, every laugh that comes from a place of genuine delight, every moment of pleasure that belongs entirely to you — that's resistance.</p>
-                <p>You did the hard work. You left the house, said no, quit the church, made money, found yourself. Now do the hardest thing of all: let yourself enjoy it. Not as a reward. Not as a milestone. As a way of being. As your default setting.</p>
-                <p>Happy isn't something you earn. It's something you protect. Guard it fiercely. Feed it daily. Refuse to hand the keys to anyone who didn't help you build it. You are in charge of happy now. Act like it.</p>`
+                body: `<p>Since you are the only human being alive responsible for your happiness, please practice pursuing it robustly! Look for the courage to pursue experiences that crash through fear and containment. Find your bliss and follow it happily. Be big. Spread out.</p>
+                <p>You cannot be contained.</p>
+                <p>Here's what nobody tells you about leaving Daddy: after the rage, the grief, the reckoning, and the rebuilding — you're <em>allowed</em> to be happy. Not productive. Not healed. Not strong. Just happy. Stupidly, irresponsibly, unapologetically happy. Maybe dance naked. Why not?</p>
+                <p>Women have been taught that happiness is frivolous — that serious women are busy, stressed, burdened by important things. That joy is for the naive, the women who haven't woken up yet. But that's a trap too, yeah? The idea that awareness must come at the cost of lightness. That liberation has to look like suffering.</p>
+                <p>It doesn't. Liberation looks like dancing in your kitchen at midnight with Beyoncé on blast. It looks like laughing so hard your mascara runs. It looks like buying yourself flowers for no reason, canceling plans because the sunset is too beautiful to miss, getting a mani-pedi in a color you've never worn, and choosing — actively, deliberately — to let yourself feel good. Treat yourself the way you want to be treated by your lover. Want to be pampered? Pamper yourself.</p>
+                <p>Happy vibes aren't shallow. They're radical. In a world that profits from women's anxiety, insecurity, and exhaustion, choosing joy is an act of rebellion. Every smile that isn't performed for Daddy's comfort, every laugh that comes from genuine delight, every moment of pleasure that belongs entirely to you — that's resistance. That's tyranny against the patriarchy. And it looks damn good on you.</p>
+                <p>You did the hard work. You left the house, said no, quit the church, made money, found yourself. Now do the hardest thing of all: let yourself enjoy it. Not as a reward. Not as a milestone. As your default setting. Guard it fiercely. Feed it daily. Refuse to hand the keys to anyone who didn't help you build it.</p>
+                <p>You are in charge of happy now, Queen. Act like it.</p>`
             },
             {
+                image: 'public/images/water-bucket.png',
                 category: 'Liberation',
                 title: 'Don\'t Be a Water Bearer',
                 date: 'May 5, 2025',
-                body: `<p>You know who she is. You might be her. The woman who carries everything — the emotional labor, the mental load, the calendar, the groceries, the feelings, the fallout, the peace-keeping, the planning, the remembering, the apologizing, the fixing. She is the water bearer. And she is drowning.</p>
-                <p>The water bearer doesn't just carry water. She carries everyone's thirst. She anticipates needs before they're spoken. She manages moods she didn't create. She smooths over conflicts she didn't cause. She holds the family, the office, the friendship group together with her bare hands — and nobody notices until she stops.</p>
-                <p>Women are trained from birth to carry. Carry the baby, carry the conversation, carry the emotional weight of every room you enter. It's so deeply woven into femininity that most women don't even recognize it as labor. It just feels like being a good person. A good wife. A good mother. A good woman.</p>
-                <p>But there's a difference between generosity and erasure. Between caring and disappearing into the care. The water bearer gives until she's empty, and then she gives from the empty place too — because she was taught that her own thirst doesn't count.</p>
-                <p>Put the bucket down. Not halfway down. Not "let me just finish this one thing" down. Down. On the ground. Walk away from it. Let the people who've been drinking from your labor learn to carry their own water.</p>
-                <p>You will feel guilty. You will feel selfish. You will feel like everything will fall apart. Some of it might. But here's the secret the patriarchy doesn't want you to know: it's not your job to hold the world together. It never was. That was just the story they told you so you'd never stop carrying.</p>`
+                body: `<p>You know who she is. You might be her. The woman who carries everything — the emotional labor, the mental load, the calendar, the groceries, the feelings, the fallout, the peace-keeping, the planning, the remembering, the apologizing for things she didn't do. She is the water bearer. And she is drowning while keeping everybody else hydrated.</p>
+                <p>A mother's self-sacrifice often goes on far too long, way after the departure of the young ones. Many women feel obligated to continue serving the adults in their households. The biological impulse to nurture gets captured by the patriarchy and reinterpreted as some <em>obligation</em> of womankind — another lie perpetuated through the centuries.</p>
+                <p>So ask yourself this question: Am I living my chosen path or someone else's? Your gut knows.</p>
+                <p>Ponder this — how have you treated Daddy, and what have you provided him? Eye candy (and all the upkeep it entails), emotional support, hand-holding through storms, navigating his family dynamics, carrying, birthing, and raising his children, all the services through the years, the sacrifices on his behalf, the purchases, plans, vacations, and holidays. Now consider: if you did a fraction of that for yourself! Imagine funneling that time, energy, money, and freedom to your best interest... exactly what would you do?</p>
+                <p>Would you be someone different?</p>
+                <p>Don't you know an Executive Assistant who runs the whole department while making it his idea? You know why. Stop being a nice person when being a good person is all that is required of you. Remember, you've likely been trained to care more for others than yourself. Prioritizing yourself may feel wrong. But it's not. Asserting your needs and being authentic in every environment is the measure of mental health.</p>
+                <p>Put the bucket down. Not halfway down. Not "let me just finish this one thing" down. <em>Down.</em> On the ground. Walk away from it. Let the people who've been drinking from your labor learn to carry their own damn water.</p>
+                <p>Mama says, "Girl, take care of yourself! Wash your face, put on some music, breathe, drink some water... sit down... how are you feeling now?" You are the Love of Your Life. Start acting like it. Your thirst counts too.</p>`
             },
             {
+                image: 'public/images/orchard.png',
                 category: 'Patriarchy',
                 title: 'Bad Male Behavior',
                 date: 'May 22, 2025',
-                body: `<p>We keep calling it "bad behavior" as if it's an anomaly. A glitch. A few men who didn't get the memo. But bad male behavior isn't a bug in the system — it is the system. The entitlement, the aggression, the emotional illiteracy, the weaponized incompetence, the casual cruelty disguised as humor — none of it is accidental. It was taught, rewarded, and protected at every level.</p>
-                <p>Boys will be boys. He just likes you. That's just how men are. He didn't mean it. You're overreacting. These aren't explanations — they're permissions. Every time bad male behavior is excused, minimized, or reframed as natural, the message to women is the same: absorb it. Adapt to it. Work around it. But never, ever name it for what it is.</p>
-                <p>So let's name it. The man who talks over you in meetings isn't confident — he's dominating. The partner who punches walls isn't stressed — he's threatening. The father who controls through silence isn't stoic — he's punishing. The husband who "helps" with the kids isn't generous — he's doing the bare minimum and expecting a medal.</p>
-                <p>Bad male behavior thrives in the gap between what women see and what they're allowed to say. We see it clearly — the manipulation, the gaslighting, the double standards — but we've been trained to doubt our own perception. Maybe I'm being too sensitive. Maybe he's going through something. Maybe I should give him another chance.</p>
-                <p>No. You saw what you saw. You felt what you felt. Your perception is not the problem. His behavior is the problem. And until we stop treating it as an individual failing and start recognizing it as a cultural epidemic, nothing changes.</p>
-                <p>It's not a few bad apples. It's the orchard. The soil. The entire agricultural policy. And women are done being told to just pick around the rotten ones.</p>`
+                body: `<p>This isn't about man-hating. Let's get that out of the way. It's about system-hating. Mislabeling this work as "man-hating" clearly misses the point. Some men are awesome and seem to understand that misogyny has ruled the culture in America for too long. Some men are allies who stand in solidarity with women seeking empowerment and autonomy.</p>
+                <p>But — and this is a big but — all women have been oppressed by men. All. It's embedded in the system. It's spoon-fed misogyny.</p>
+                <p>We keep calling it "bad behavior" like it's an anomaly. A few guys who didn't get the memo. But the entitlement, the aggression, the emotional illiteracy, the weaponized incompetence, the casual cruelty disguised as humor — none of it is accidental. It was taught, rewarded, and protected at every level. Boys will be boys. He just likes you. That's just how men are. He didn't mean it. You're overreacting. These aren't explanations — they're <em>permissions</em>.</p>
+                <p>So let's name it. The man who talks over you in meetings isn't confident — he's dominating. The partner who punches walls isn't stressed — he's threatening. The father who controls through silence isn't stoic — he's punishing. The husband who "helps" with the kids isn't generous — he's doing the bare minimum and expecting a medal. Watch how Daddy morphs in the face of you leaving him. You'll see tantrums, threats, and theatrics. True colors show when you don't share his perspective and are not under his control.</p>
+                <p>Where are these "good men" who deserve love and respect? The supportive ones vote for women's rights, yet they have erred on the side of caution. They have not sufficiently stood up or forced their peers to evolve. Good men's collective silence and inactivity have inevitably supported the oppression of women. Men are coarse learners with proud egos — there are zero new concepts in these pages, and still the ideas don't land.</p>
+                <p>Here's a thought: if you're a man and you want to have sex with a woman, be someone she wants to have sex with. Research it if you need to. Become a vocal activist for women. Educate your bros, Bruh.</p>
+                <p>The patriarchy needs a time-out. A consequence. And women are done being told to just pick around the rotten apples when it's the whole damn orchard.</p>`
             },
             {
+                image: 'public/images/womanpower.png',
+                imagePos: 'center 15%',
                 category: 'Matriarchy',
                 title: 'Mother Knows Best',
                 date: 'June 8, 2025',
-                body: `<p>Before there were boardrooms, there were hearths. Before there were senators, there were midwives. Before the patriarchy rewrote history and put men at the center of every story, there were mothers — and they ran everything.</p>
-                <p>Mother knows best isn't a cliché. It's a suppressed truth. Maternal wisdom — the intelligence born of carrying life, of reading a child's face before they can speak, of holding a family together through famine, war, and grief — is the oldest form of leadership on the planet. And it has been systematically devalued for centuries.</p>
-                <p>The patriarchy replaced maternal authority with paternal control. It took the soft power of intuition, empathy, and relational intelligence and called it weakness. It took the hard power of endurance, sacrifice, and fierce protection and called it instinct — as if it required no skill, no intelligence, no courage.</p>
-                <p>But mothers know things. They know when something is wrong before the test results come back. They know which friend is a bad influence before the damage is done. They know that healing happens in the kitchen, that grief needs witnesses, that children don't need perfection — they need presence.</p>
-                <p>The matriarchal paradigm isn't about putting women in charge instead of men. It's about honoring the wisdom that has always been there — the wisdom of care, of connection, of putting life at the center instead of profit. It's about recognizing that the qualities we've dismissed as "just mothering" are actually the qualities the world is dying without.</p>
-                <p>Mother knows best. She always did. The revolution isn't women learning to lead. It's the world finally learning to listen.</p>`
+                body: `<p>Imagine a matriarchal thought bubble enveloping the planet. Imagine Mother Nature's seasonal color palette enveloping humanity's senses in tender, loving embraces and rhythmic cycles and patterns of experience that foster growth and expansion of love and consciousness. What if, instead of Father Time's matrix dictating life's meaning as accumulating wealth and conquering nations, it were more about the ebb and flow of life on the planet?</p>
+                <p>What if success were measured in connectivity with other humans and the health and well-being of the collective? What if mutual respect for all species were a given, and cooperation replaced competition, collaboration replaced control, and "the power of love replaced the love of power"?</p>
+                <p>Mother Nature would rejoice.</p>
+                <p>Under the current patriarchal authority, the planet's life is hanging by a thread. Men suck at housekeeping. Misplaced priorities and unauthorized arrogance have clouded their contribution. Sure, they "built the world," but now they are burning it down and starving its children. Decisions have been made for centuries behind closed doors in rooms empty of women — votes taken, wars launched, nations carved up without a maternal perspective in sight.</p>
+                <p>But mothers know things. They know when something is wrong before the test results come back. They know which friend is a bad influence before the damage is done. They know that healing happens in the kitchen, that grief needs witnesses, that children don't need perfection — they need presence. These aren't soft skills. These are the <em>missing</em> skills. The exact prescription for what ails planet Earth today.</p>
+                <p>Alignment with the Divine Feminine qualities — ebbing, flowing, connecting, nurturing, intuiting, feeling, and mutually respecting all life — will fill the gap that's missing from the patriarchal manifesto. So it seems there is only one solution:</p>
+                <p>The complete and total takeover by women!</p>
+                <p>It's doable. It's happening. And you are right here, right now. A force of Mother Nature is brewing and sweeping the planet with healing energy. The revolution isn't women learning to lead. It's the world finally learning to listen. Mother knows best. She always did.</p>`
             },
             {
+                image: 'public/images/happy-girl.png',
+                imagePos: 'center 20%',
                 category: 'Self',
                 title: 'You Have YOU',
                 date: 'June 22, 2025',
-                body: `<p>At the end of it all — after you've left the house, said no, quit the church, made money, taken a lover, met your body, faced your shadows, felt your rage, climbed higher, had your reckoning, and claimed your joy — there is one person standing. You.</p>
-                <p>Not the version of you that someone else approved. Not the you that was palatable, manageable, convenient. The real you. The one who was under there the whole time, buried beneath decades of conditioning, accommodation, and self-abandonment. She's still here. She's been waiting.</p>
-                <p>You have you. That's not a consolation prize. That's the whole point. Every step in this book, every act of rebellion, every painful shedding of a skin that was never yours — it was all leading here. To the moment you look in the mirror and recognize the woman looking back. Not with judgment. Not with a to-do list. With love.</p>
-                <p>The patriarchy taught you that you are not enough on your own. That you need a man, a title, a ring, a label, a role to be complete. That a woman alone is a woman who failed. But a woman alone — truly, freely, powerfully alone — is a woman who chose herself. And that is the most dangerous thing in the world to a system that depends on your self-doubt.</p>
-                <p>You don't need anyone's permission to exist fully. You don't need validation to know your worth. You don't need a daddy, a husband, a savior, or an institution to tell you who you are. You already know. You've always known.</p>
-                <p>You have you. And she is more than enough. She is extraordinary. She is free. And she is just getting started.</p>`
+                body: `<p>A butterfly wasn't always a butterfly. Even the most exquisite monarch was a hot mess ten days ago — a sloppy heap in the chrysalis as her body parts dissolved around her. No doubt she felt scared. Little did she know her plump and dumpy caterpillar body goo was being repurposed into beautiful wings for taking flight and antennae for connecting with Mother Nature.</p>
+                <p>It's a miracle! It's also ordinary — even mundane. Metamorphosis follows a predictable path: growth, dissolution, then the freedom to fly.</p>
+                <p>If you are here, reading these words, you are likely in some stage of transformation. Congratulations! You are not alone. Millions of women are wriggling in their chrysalises, wondering how to become happier and healthier in pursuit of their bliss.</p>
+                <p>At the end of it all — after you've left the house, said no, quit the church, made money, taken a lover, met your body, faced your shadows, felt your rage, climbed higher, had your reckoning, and claimed your joy — there is one person standing. You. Not the version Daddy approved. Not the palatable, manageable, convenient you. The <em>real</em> you. The one who was under there the whole time, buried beneath decades of conditioning and self-sacrifice. She's still here. She's been waiting.</p>
+                <p>You are the Love of Your Life. That's not a consolation prize. That's the whole damn point. Every step, every act of rebellion, every painful shedding of a skin that was never yours — it was all leading here. To the moment you look in the mirror and recognize the woman looking back. Not with judgment. Not with a to-do list. With love.</p>
+                <p>The patriarchy taught you that you are not enough on your own. That you need a man, a title, a ring, a role to be complete. That a woman alone is a woman who failed. But a woman alone — truly, freely, powerfully alone — is a woman who chose herself. And that is the most dangerous thing in the world to a system that depends on your self-doubt.</p>
+                <p>You are so much more than the box you came in. Feel free to kick those cardboard walls down. Or curl up inside them until you're ready. That day will come if you continue to listen for your voice. Your gut will never mislead you because she is anchored in Mother Nature's matrix of energetic connection.</p>
+                <p>You have you, sister. And she is extraordinary. She is free. And she is just getting started.</p>`
             },
             {
+                image: 'public/images/happy.png',
                 category: 'Philosophy',
                 title: 'What Is Happiness?',
                 date: 'July 6, 2025',
-                body: `<p>Everyone wants it. Nobody can define it. We chase it like a destination — somewhere out there, past the next promotion, the next relationship, the next ten pounds lost. We treat it like a reward that arrives when we've finally done enough, been enough, fixed enough. But happiness isn't a place you arrive at. It's a way you move through the world.</p>
-                <p>The patriarchy has its own definition of happiness for women: a husband, children, a clean house, a grateful smile. Fulfillment through service. Joy through sacrifice. Contentment through disappearance. And if that formula doesn't work for you — if you feel restless, unsatisfied, hungry for something you can't name — well, there must be something wrong with you.</p>
+                body: `<p>What did you like to do when you were a kid? When were you happiest? Do you remember? What music or hobby? What sport or club? What books? What television shows and characters? Who inspires you? What badass woman is showing up for herself in a way you love and want to imitate — the highest form of flattery?</p>
+                <p>Think about it.</p>
+                <p>The patriarchy has its own definition of happiness for women: a husband, children, a clean house, a grateful smile. Fulfillment through service. Joy through sacrifice. Contentment through disappearance. The patriarchy's assertion — demand? — that a woman's place is barefoot and pregnant, patiently waiting Daddy's return from the world while keeping his dinner warm, is as insulting as it is transparent. And if that formula doesn't work for you? If you feel restless, unsatisfied, hungry for something you can't name?</p>
                 <p>There is nothing wrong with you. The formula is wrong.</p>
-                <p>Happiness is not compliance. It is not comfort. It is not the absence of conflict or the presence of a man. Happiness, real happiness, is alignment. It's the feeling of living in accordance with your own truth — not your mother's truth, not your husband's truth, not the culture's truth. Yours.</p>
-                <p>Sometimes happiness is loud — the belly laugh, the dance floor, the road trip with no plan. But more often it's quiet. It's the morning coffee in silence. The walk with no destination. The deep exhale of a woman who has finally stopped performing and started being.</p>
-                <p>You won't find happiness by looking for it. You'll find it by removing everything that isn't it — the obligations you never agreed to, the roles you never chose, the standards you never set. Strip all of that away, and what's left? You. And you, it turns out, are the happiness you were looking for all along.</p>`
+                <p>Happiness is not compliance. It is not the absence of conflict or the presence of a man. Happiness — real happiness — is alignment. It's the feeling of living in accordance with your own truth. Not your mother's truth, not your husband's truth, not the culture's truth. <em>Yours.</em> Simply existing outside the matrix of productivity becomes an act of rebellion.</p>
+                <p>Sometimes happiness is loud — the belly laugh, the dance floor, Beyoncé on repeat, the road trip with no plan. But more often it's quiet. The morning coffee in silence. The walk with no destination. The deep exhale of a woman who has finally stopped performing and started being. Release the ticking "time bomb" of the masculine construct, and as you exhale, release the stress and relax, noticing the calm.</p>
+                <p>Looking for unconditional love, protection, or direction anywhere but within yourself will ultimately leave you empty. You won't find happiness by looking for it out there. You'll find it by removing everything that isn't it — the obligations you never agreed to, the roles you never chose, the standards you never set. Strip all of that away, and what's left?</p>
+                <p>You. The Love of Your Life. And you, it turns out, are the happiness you were looking for all along. Good job, Mama.</p>`
             }
         ];
 
@@ -1533,10 +1600,16 @@ linear-gradient(to bottom, rgba(114, 21, 21, 0.1) 1px, transparent 1px);
         function openBlogModal(index) {
             const article = blogArticles[index];
             blogModalBody.innerHTML = `
+                <div class="float-right ml-6 mb-4 w-[35%] hidden md:block">
+                    <img src="${article.image}" alt="${article.title}" class="w-full h-auto rounded-xl object-cover" style="object-position: ${article.imagePos || 'center center'}; max-height: 300px;">
+                </div>
+                <div class="md:hidden -mx-8 -mt-8 mb-6">
+                    <img src="${article.image}" alt="${article.title}" class="w-full h-56 object-cover rounded-b-none" style="object-position: ${article.imagePos || 'center center'}">
+                </div>
                 <div class="text-[10px] uppercase tracking-widest text-[#a52020] mb-3">${article.category}</div>
-                <h2 class="font-headline text-3xl md:text-4xl text-[#F4EFE6] mb-3 leading-tight">${article.title}</h2>
-                <div class="text-xs text-white/30 uppercase tracking-widest mb-8">${article.date}</div>
-                <div class="prose-blog text-base text-white/60 font-light leading-relaxed space-y-5">${article.body}</div>
+                <h2 class="font-headline text-3xl md:text-4xl text-[#1a1a1a] mb-3 leading-tight">${article.title}</h2>
+                <div class="text-xs text-black/30 uppercase tracking-widest mb-8">${article.date}</div>
+                <div class="prose-blog text-base text-black/70 font-light leading-relaxed space-y-5">${article.body}</div>
             `;
             blogModal.classList.add('active');
             document.body.style.overflow = 'hidden';
