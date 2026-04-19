@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog | Vanessa Prestridge Graf</title>
+<meta name="description" content="Writings on healing, rebellion, and leaving the patriarchy behind. Essays by Vanessa Prestridge Graf, author of 11 Steps to Leaving Your Daddy.">
+<meta name="keywords" content="Vanessa Prestridge Graf, blog, healing, rebellion, patriarchy, feminism, empowerment, leaving your daddy">
+<meta property="og:title" content="Blog | Vanessa Prestridge Graf">
+<meta property="og:description" content="Writings on healing, rebellion, and leaving the patriarchy behind. Essays by Vanessa Prestridge Graf.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Blog | Vanessa Prestridge Graf">
+<meta name="twitter:description" content="Writings on healing, rebellion, and leaving the patriarchy behind.">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+
+<style>
+body {
+font-family: 'Inter', sans-serif;
+font-weight: 300;
+font-size: 16px;
+line-height: 1.7;
+letter-spacing: 0.01em;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+h1, h2, h3, h4, h5, h6, .font-headline {
+font-family: 'Anton', sans-serif;
+letter-spacing: 1px;
+text-transform: uppercase;
+}
+.font-serif {
+font-family: 'Lora', serif !important;
+letter-spacing: normal !important;
+text-transform: none !important;
+}
+iconify-icon {
+stroke-width: 1.5;
+}
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #050505; }
+::-webkit-scrollbar-thumb { background: #262626; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #721515; }
+
+/* Light mode overrides */
+body.light-mode {
+background: #F4EFE6;
+color: #050505;
+}
+body.light-mode nav {
+background: rgba(255, 255, 255, 0.85);
+border-color: rgba(0,0,0,0.08);
+}
+body.light-mode nav a,
+body.light-mode nav button {
+color: #050505;
+}
+body.light-mode nav .text-white\/60,
+body.light-mode nav .text-white\/70 {
+color: rgba(5,5,5,0.5);
+}
+body.light-mode nav .text-white\/60:hover,
+body.light-mode nav .text-white\/70:hover {
+color: #050505;
+}
+body.light-mode .order-now-btn {
+background: #721515 !important;
+color: #ffffff !important;
+border-color: #721515 !important;
+}
+body.light-mode .order-now-btn:hover {
+background: #a52020 !important;
+}
+body.light-mode .text-\[\#F4EFE6\],
+body.light-mode .text-white,
+body.light-mode h1, body.light-mode h2, body.light-mode h3, body.light-mode h4 {
+color: #050505;
+}
+body.light-mode .text-white\/50,
+body.light-mode .text-white\/40,
+body.light-mode .text-white\/30,
+body.light-mode .text-white\/25,
+body.light-mode .text-white\/60,
+body.light-mode .text-white\/70,
+body.light-mode .text-white\/80,
+body.light-mode .text-white\/90 {
+color: rgba(5,5,5,0.5);
+}
+body.light-mode .bg-\[\#050505\],
+body.light-mode .bg-\[\#020202\],
+body.light-mode footer {
+background: #F4EFE6;
+}
+body.light-mode .bg-\[\#0a0a0a\] {
+background: #ede7db !important;
+}
+body.light-mode .border-white\/5,
+body.light-mode .border-white\/10 {
+border-color: rgba(0,0,0,0.08);
+}
+body.light-mode .bg-white\/5 {
+background: rgba(0,0,0,0.04);
+}
+body.light-mode .bg-white\/10 {
+background: rgba(0,0,0,0.06);
+}
+body.light-mode #mobileMenu {
+background: rgba(244, 239, 230, 0.95);
+}
+body.light-mode ::-webkit-scrollbar-track {
+background: #F4EFE6;
+}
+body.light-mode ::-webkit-scrollbar-thumb {
+background: #c4b9a8;
+}
+
+/* TOC sidebar */
+.toc-sidebar {
+position: sticky;
+top: 6rem;
+max-height: calc(100vh - 8rem);
+overflow-y: auto;
+}
+.toc-sidebar::-webkit-scrollbar { width: 3px; }
+.toc-sidebar::-webkit-scrollbar-thumb { background: rgba(114,21,21,0.3); border-radius: 2px; }
+
+.toc-link {
+display: block;
+padding: 6px 12px;
+font-size: 13px;
+line-height: 1.4;
+color: rgba(5,5,5,0.45);
+border-left: 2px solid transparent;
+transition: all 0.2s;
+text-decoration: none;
+}
+.toc-link:hover {
+color: rgba(5,5,5,0.8);
+}
+.toc-link.active {
+color: #721515;
+border-left-color: #721515;
+font-weight: 500;
+}
+
+/* Dark mode TOC */
+body:not(.light-mode) .toc-link {
+color: rgba(244,239,230,0.4);
+}
+body:not(.light-mode) .toc-link:hover {
+color: rgba(244,239,230,0.7);
+}
+body:not(.light-mode) .toc-link.active {
+color: #e04040;
+border-left-color: #e04040;
+}
+
+/* Mobile horizontal TOC */
+.toc-mobile {
+overflow-x: auto;
+-webkit-overflow-scrolling: touch;
+scrollbar-width: none;
+}
+.toc-mobile::-webkit-scrollbar { display: none; }
+.toc-mobile-link {
+white-space: nowrap;
+padding: 8px 16px;
+font-size: 12px;
+color: rgba(5,5,5,0.45);
+border-bottom: 2px solid transparent;
+transition: all 0.2s;
+text-decoration: none;
+display: inline-block;
+}
+.toc-mobile-link.active {
+color: #721515;
+border-bottom-color: #721515;
+font-weight: 500;
+}
+body:not(.light-mode) .toc-mobile-link {
+color: rgba(244,239,230,0.4);
+}
+body:not(.light-mode) .toc-mobile-link.active {
+color: #e04040;
+border-bottom-color: #e04040;
+}
+
+/* Article image float */
+.article-image-float {
+float: right;
+width: 35%;
+margin-left: 1.5rem;
+margin-bottom: 1rem;
+border-radius: 0.75rem;
+overflow: hidden;
+}
+@media (max-width: 767px) {
+.article-image-float {
+float: none;
+width: 100%;
+margin-left: 0;
+margin-bottom: 1.5rem;
+}
+}
+
+/* Article prose */
+.prose-blog p {
+margin-bottom: 1.25rem;
+}
+.prose-blog em {
+font-style: italic;
+color: #721515;
+}
+</style></head>
+<body class="scroll-smooth bg-[#050505] text-[#F4EFE6] selection:bg-[#721515] selection:text-[#F4EFE6] overflow-x-hidden relative light-mode">
+<script>if(localStorage.getItem('theme')==='dark')document.body.classList.remove('light-mode');</script>
+
+    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-[#721515] opacity-[0.03] blur-[120px] rounded-full pointer-events-none z-0"></div>
+    <div class="fixed bottom-0 right-0 w-[800px] h-[800px] bg-[#721515] opacity-[0.02] blur-[150px] rounded-full pointer-events-none z-0"></div>
+
+    <nav class="fixed top-0 w-full z-50 backdrop-blur-xl bg-[#050505]/60 border-b border-white/5 py-4 px-6 md:px-12 transition-all duration-300">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <a href="/" class="relative z-50">
+            <img src="public/documents/lgo-graf.png" alt="11 Steps to Leaving Your Daddy" class="h-8 md:h-10 w-auto">
+        </a>
+
+        <div class="hidden lg:flex items-center gap-7 z-50">
+            <a href="/" class="text-xs font-medium uppercase tracking-widest text-white/60 hover:text-white transition-colors">The Book</a>
+            <a href="about.html" class="text-xs font-medium uppercase tracking-widest text-white/60 hover:text-white transition-colors">About Vanessa</a>
+            <a href="blog.html" class="text-xs font-medium uppercase tracking-widest text-[#721515] transition-colors">Blog</a>
+            <a href="playlists.html" class="text-xs font-medium uppercase tracking-widest text-white/60 hover:text-white transition-colors">Playlists</a>
+            <a href="contact.html" class="text-xs font-medium uppercase tracking-widest text-white/60 hover:text-white transition-colors">Contact</a>
+        </div>
+
+        <div class="hidden lg:flex items-center gap-3 z-50">
+            <button id="themeToggle" class="w-10 h-10 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-white/60 hover:text-white hover:bg-white/10 transition-all" aria-label="Toggle light mode">
+                <iconify-icon icon="solar:sun-2-linear" class="text-lg" id="themeIcon"></iconify-icon>
+            </button>
+            <a href="https://www.amazon.com/11-Steps-Leaving-Your-Daddy/dp/B0FZQ26Q6P?crid=14GNHRQE3NXKI&dib=eyJ2IjoiMSJ9.nxESnlRCD7rowIRn7ILeiXSzuuN3kDXTdh6zrf2GQxAWc5uuKZEP36bgyw4izTxz3VJzagRJgnLgCGezqZDRggmeSCTFZqENowzqrTeeOIvRASiRLa4RL92pHOsOp0JVZrtn7PJeUjItmqKZxQIQTQWHhhU3Iejpv321xTvBM4D0kCjlSNtUIMKY_MgJ9Gmp3s5otrGo5DCtSyRTGUtHTkOPNyY4cAIAQ3qUjuPYQZ4.-g6UJ9NVVn1zCIUutHnZox9XmI5JkMmQaNDuGuEfg3Q&dib_tag=se&keywords=leave+your+daddy&qid=1774124013&sprefix=leaev+your+daddy%2Caps%2C151&sr=8-1" target="_blank" rel="noopener" class="order-now-btn text-xs font-medium uppercase tracking-widest bg-white/5 border border-white/10 hover:bg-white/10 text-white px-5 py-2.5 rounded-full transition-all">
+                Order Now
+            </a>
+        </div>
+
+        <div class="flex items-center gap-2 lg:hidden z-50">
+            <button id="themeToggleMobile" class="w-10 h-10 rounded-full border border-white/10 bg-white/5 flex items-center justify-center text-white/60 hover:text-white hover:bg-white/10 transition-all" aria-label="Toggle light mode">
+                <iconify-icon icon="solar:sun-2-linear" class="text-lg" id="themeIconMobile"></iconify-icon>
+            </button>
+            <button class="text-white/80 flex items-center justify-center" id="menuToggle">
+                <iconify-icon icon="solar:hamburger-menu-linear" class="text-2xl"></iconify-icon>
+            </button>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="fixed inset-0 bg-[#050505]/95 backdrop-blur-2xl z-40 flex flex-col items-center justify-center gap-8 opacity-0 pointer-events-none transition-opacity duration-300">
+            <a href="/" class="text-lg uppercase tracking-widest text-white/70 hover:text-white transition-colors mobile-link">The Book</a>
+            <a href="about.html" class="text-lg uppercase tracking-widest text-white/70 hover:text-white transition-colors mobile-link">About Vanessa</a>
+            <a href="blog.html" class="text-lg uppercase tracking-widest text-[#721515] transition-colors mobile-link">Blog</a>
+            <a href="playlists.html" class="text-lg uppercase tracking-widest text-white/70 hover:text-white transition-colors mobile-link">Playlists</a>
+            <a href="contact.html" class="text-lg uppercase tracking-widest text-white/70 hover:text-white transition-colors mobile-link">Contact</a>
+            <div class="mt-4">
+                <a href="https://www.amazon.com/11-Steps-Leaving-Your-Daddy/dp/B0FZQ26Q6P?crid=14GNHRQE3NXKI&dib=eyJ2IjoiMSJ9.nxESnlRCD7rowIRn7ILeiXSzuuN3kDXTdh6zrf2GQxAWc5uuKZEP36bgyw4izTxz3VJzagRJgnLgCGezqZDRggmeSCTFZqENowzqrTeeOIvRASiRLa4RL92pHOsOp0JVZrtn7PJeUjItmqKZxQIQTQWHhhU3Iejpv321xTvBM4D0kCjlSNtUIMKY_MgJ9Gmp3s5otrGo5DCtSyRTGUtHTkOPNyY4cAIAQ3qUjuPYQZ4.-g6UJ9NVVn1zCIUutHnZox9XmI5JkMmQaNDuGuEfg3Q&dib_tag=se&keywords=leave+your+daddy&qid=1774124013&sprefix=leaev+your+daddy%2Caps%2C151&sr=8-1" target="_blank" rel="noopener" class="text-sm font-medium uppercase tracking-widest bg-[#721515] text-white px-8 py-3 rounded-full transition-all hover:bg-[#a52020] mobile-link">
+                    Order Now
+                </a>
+            </div>
+        </div>
+    </div>
+    </nav>
+
+    <!-- Mobile TOC (horizontal scroll) -->
+    <div class="lg:hidden fixed top-[72px] left-0 w-full z-40 backdrop-blur-xl bg-[#050505]/60 border-b border-white/5">
+        <div class="toc-mobile flex px-4 py-1">
+            <a href="#article-0" class="toc-mobile-link active" data-toc="0">Jumping Off the Daddyship</a>
+            <a href="#article-1" class="toc-mobile-link" data-toc="1">The Power of No</a>
+            <a href="#article-2" class="toc-mobile-link" data-toc="2">Helen Keller Spirituality</a>
+            <a href="#article-3" class="toc-mobile-link" data-toc="3">Financial Self-Sufficiency</a>
+            <a href="#article-4" class="toc-mobile-link" data-toc="4">The Power of Sexual Consent</a>
+            <a href="#article-5" class="toc-mobile-link" data-toc="5">Happy Vibes</a>
+            <a href="#article-6" class="toc-mobile-link" data-toc="6">Don't Be a Water Bearer</a>
+            <a href="#article-7" class="toc-mobile-link" data-toc="7">Bad Male Behavior</a>
+            <a href="#article-8" class="toc-mobile-link" data-toc="8">Mother Knows Best</a>
+            <a href="#article-9" class="toc-mobile-link" data-toc="9">You Have YOU</a>
+            <a href="#article-10" class="toc-mobile-link" data-toc="10">What Is Happiness?</a>
+        </div>
+    </div>
+
+    <!-- Main content area with sidebar -->
+    <div class="max-w-7xl mx-auto px-6 md:px-12 pt-24 lg:pt-28 pb-20 relative z-10">
+
+        <!-- Page header -->
+        <div class="mb-12 lg:mb-16">
+            <h1 class="font-headline text-5xl md:text-6xl lg:text-7xl mb-4">Blog</h1>
+            <p class="text-white/50 font-light text-lg max-w-2xl">Writings on healing, rebellion, and leaving the patriarchy behind.</p>
+        </div>
+
+        <div class="flex gap-10">
+
+            <!-- Left sidebar TOC (desktop only) -->
+            <aside class="hidden lg:block w-[250px] flex-shrink-0">
+                <div class="toc-sidebar">
+                    <div class="text-[10px] uppercase tracking-widest text-white/30 mb-4 px-3 font-medium">Table of Contents</div>
+                    <nav>
+                        <a href="#article-0" class="toc-link active" data-toc="0">Jumping Off the Daddyship</a>
+                        <a href="#article-1" class="toc-link" data-toc="1">The Power of No</a>
+                        <a href="#article-2" class="toc-link" data-toc="2">Helen Keller Spirituality</a>
+                        <a href="#article-3" class="toc-link" data-toc="3">Financial Self-Sufficiency</a>
+                        <a href="#article-4" class="toc-link" data-toc="4">The Power of Sexual Consent</a>
+                        <a href="#article-5" class="toc-link" data-toc="5">Happy Vibes</a>
+                        <a href="#article-6" class="toc-link" data-toc="6">Don't Be a Water Bearer</a>
+                        <a href="#article-7" class="toc-link" data-toc="7">Bad Male Behavior</a>
+                        <a href="#article-8" class="toc-link" data-toc="8">Mother Knows Best</a>
+                        <a href="#article-9" class="toc-link" data-toc="9">You Have YOU</a>
+                        <a href="#article-10" class="toc-link" data-toc="10">What Is Happiness?</a>
+                    </nav>
+                </div>
+            </aside>
+
+            <!-- Articles -->
+            <main class="flex-1 min-w-0 mt-6 lg:mt-0">
+
+                <!-- Article 0: Jumping Off the Daddyship -->
+                <article id="article-0" class="mb-10 scroll-mt-32 bg-white rounded-2xl border border-black/10 p-8 md:p-12 shadow-sm">
+                    <div class="article-image-float">
+                        <img src="daddyship.png" alt="Jumping Off the Daddyship" class="w-full h-auto object-cover" style="object-position: center 20%; max-height: 340px;">
+                    </div>
+                    <div class="text-[10px] uppercase tracking-widest text-[#a52020] mb-3">Freedom</div>
+                    <h2 class="font-headline text-3xl md:text-4xl mb-3 leading-tight" style="color: #1a1a1a !important;">Jumping Off the Daddyship</h2>
+                    <div class="text-xs uppercase tracking-widest mb-8" style="color: rgba(0,0,0,0.3);">January 15, 2025</div>
+                    <div class="prose-blog text-base font-light leading-relaxed" style="color: rgba(0,0,0,0.65);">
+                        <p>Girl, the Daddyship is the boat you were born on. You didn't buy a ticket. You didn't pick the destination. Daddy was the captain, and everybody onboard — Mama included — was sailing his course. The family rules, the religion, the money situation, whose dreams got funded and whose got a pat on the head — all of it was decided before you could talk. And for a long time, that was just... life. You didn't question the boat because you didn't know there was an ocean.</p>
+                        <p>But then you looked over the railing.</p>
+                        <p>Maybe it was a fight. Maybe it was a quiet Tuesday where something cracked open inside you and a still, small voice whispered: <em>This isn't mine. None of this is mine.</em> Maybe you've been hearing that voice for years and stuffing it down with busyness and wine and being a good girl. Your gut has been trying to tell you something, yeah?</p>
+                        <p>Ask your gut. She knows.</p>
+                        <p>Here's the thing about the Daddyship — it's familiar. You know where everything is. You know how to read Daddy's moods, how to duck when the storms hit, how to keep the peace and pass the nachos and smile like everything's fine. You've been navigating this vessel your whole life. And the water below? It looks cold. Dark. Endless. Your inner damsel is screaming: <em>What if you drown? What if nobody rescues you? What if you can't afford Botox!?</em></p>
+                        <p>Remind that little girl inside you that you have always been there for her. You — above everyone else — have shown up for her every single day. You are the Love of Your Life. Not Daddy. Not the captain. Not the ship. You.</p>
+                        <p>So why jump? Because the ship is going somewhere you don't want to go. Because Daddy's course was never yours. Because you've been crew on somebody else's voyage long enough, and your shoulders are tired and your belly is in knots and you're done — <em>done</em> — asking for permission to exist.</p>
+                        <p>The jump is the hardest part. Not the swimming — you'll figure that out, trust me. Not the cold — your nervous system will recalibrate. The hardest part is releasing your grip on that railing. Letting go of everything familiar, even when familiar means miserable. Because misery you understand feels safer than freedom you don't.</p>
+                        <p>But here's what nobody tells you about the water: it holds you. Mother Nature holds you. Once you let go and take the plunge, you discover something wild — you can float. You can swim. You can build your own damn boat. And the further you get from the Daddyship, the smaller it looks.</p>
+                        <p>And the bigger you feel.</p>
+                        <p>Jump, sister. The water is warmer than you think. And you were never, <em>ever</em> meant to be a passenger on someone else's voyage. You are the captain now. Feel free to dance naked on the deck.</p>
+                    </div>
+                    <div style="clear:both"></div>
+                    <div class="border-b border-white/10 mt-12"></div>
+                </article>
+
+                <!-- Article 1: The Power of No -->
+                <article id="article-1" class="mb-10 scroll-mt-32 bg-white rounded-2xl border border-black/10 p-8 md:p-12 shadow-sm">
+                    <div class="article-image-float">
+                        <img src="power-of-no.png" alt="I Won't Be Able to Do That: The Power of No" class="w-full h-auto object-cover" style="object-position: center center; max-height: 340px;">
+                    </div>
+                    <div class="text-[10px] uppercase tracking-widest text-[#a52020] mb-3">Boundaries</div>
+                    <h2 class="font-headline text-3xl md:text-4xl mb-3 leading-tight" style="color: #1a1a1a !important;">I Won't Be Able to Do That: The Power of No</h2>
+                    <div class="text-xs uppercase tracking-widest mb-8" style="color: rgba(0,0,0,0.3);">February 3, 2025</div>
+                    <div class="prose-blog text-base font-light leading-relaxed" style="color: rgba(0,0,0,0.65);">
+                        <p>"I won't be able to do that." Say it out loud. Go ahead — right now. Feel that? That little jolt in your chest? That's your conditioning throwing a tantrum because you just broke the rules.</p>
+                        <p>What happened to you after you were two years old? At two, you were <em>excellent</em> at saying no. "No!" was your whole personality. The terrible twos — remember? That was you, exercising your God-given right to decline. But somewhere between pigtails and prom, the "no" got trained out of you. Replaced with: Be sweet. Be helpful. Bring Daddy a beer. Smile, baby. Good girl.</p>
+                        <p>Sound familiar? Yeah.</p>
+                        <p>Research actually determined the magic phrase that gets you off the hook: <em>I won't be able to do that.</em> Not "I can't" — people will try to talk you out of "can't." But "I won't be able to do that"? They accept it. It's a closed door with a deadbolt. Practice it in front of a mirror — seriously, this lights up new neural pathways and makes it easier to say next time. The Art of No is a skill, and like any skill, you get better with reps.</p>
+                        <p>Here's what Daddy never told you: a man who says no is "decisive." A woman who says no is "difficult." See the game? The rules were never about politeness. They were about control. A woman who can say no is a woman who can't be managed. And that terrifies the patriarchy.</p>
+                        <p>Because saying no to Daddy is saying <em>yes</em> to You — the only person in charge of your happiness. Whatever you do, don't feel guilty for it. Feeling guilty for taking care of yourself is straight from the patriarchal mindset. How dare you put anything before Daddy? (Eye roll.)</p>
+                        <p>So say it. To the PTA, to your mother-in-law, to your boss, to the man-child who wants nachos, to the voice in your head that insists you're being selfish. You're not being selfish. You're being the Love of Your Life. And that starts with the most powerful two-letter word in the English language.</p>
+                    </div>
+                    <div style="clear:both"></div>
+                    <div class="border-b border-white/10 mt-12"></div>
+                </article>
+
+                <!-- Article 2: Helen Keller Spirituality -->
+                <article id="article-2" class="mb-10 scroll-mt-32 bg-white rounded-2xl border border-black/10 p-8 md:p-12 shadow-sm">
+                    <div class="article-image-float">
+                        <img src="helen-keller.jpg" alt="Helen Keller Spirituality" class="w-full h-auto object-cover" style="object-position: center 30%; max-height: 340px;">
+                    </div>
+                    <div class="text-[10px] uppercase tracking-widest text-[#a52020] mb-3">Spirituality</div>
+                    <h2 class="font-headline text-3xl md:text-4xl mb-3 leading-tight" style="color: #1a1a1a !important;">Helen Keller Spirituality</h2>
+                    <div class="text-xs uppercase tracking-widest mb-8" style="color: rgba(0,0,0,0.3);">February 20, 2025</div>
+                    <div class="prose-blog text-base font-light leading-relaxed" style="color: rgba(0,0,0,0.65);">
+                        <p>Before Helen Keller was two years old, she lost the ability to see, hear, and speak. Trapped inside herself. No images, no sounds, no language. Just... sensation. The touch of her fingers, the smells, the <em>feels</em>. And yet — when asked years later about her belief in God — she said she became aware of It early in life through sensory experiences in nature. She didn't know what It was called, but she knew It was there. She could feel Its presence.</p>
+                        <p>Without Sunday School.</p>
+                        <p>Let that sink in for a second. A woman who couldn't see or hear perceived more about the nature of reality than most people with both faculties fully intact. No preacher told her about God. No Daddy explained the rules. She <em>felt</em> it — through Mother Nature's rhythms, through touch, through the force of love that permeates everything alive.</p>
+                        <p>And here's the thing that should make you furious: the patriarchy has spent centuries trying to suppress exactly this kind of knowing. Women have always had access to it — intuition, gut feeling, that quiet voice that tells you something is wrong before the evidence arrives. The patriarchy called it hysteria. Science called it anecdotal. Religion called it dangerous. But it never went away. It just went underground.</p>
+                        <p>Your gut knows, yeah? She's been trying to tell you things your whole life. That relationship that felt off. That job that was draining your soul. That moment in church when something didn't sit right but you pushed it down because Daddy said so and the pastor said so and everybody said so.</p>
+                        <p>Ask your gut. She knows.</p>
+                        <p>You don't need the stories from Daddy's perspective to have a connection to the divine. Like Helen Keller, you can feel it — the force, the energy, the Love — without anybody's permission or interpretation. Your inner knowing is not woo-woo. It is wisdom. And it has been waiting, patiently and faithfully, for you to stop apologizing for it and start listening.</p>
+                        <p>Goddamn, Helen. Yes.</p>
+                    </div>
+                    <div style="clear:both"></div>
+                    <div class="border-b border-white/10 mt-12"></div>
+                </article>
+
+                <!-- Article 3: Financial Self-Sufficiency -->
+                <article id="article-3" class="mb-10 scroll-mt-32 bg-white rounded-2xl border border-black/10 p-8 md:p-12 shadow-sm">
+                    <div class="article-image-float">
+                        <img src="financial-freedom.png" alt="Financial Self-Sufficiency" class="w-full h-auto object-cover" style="object-position: center 20%; max-height: 340px;">
+                    </div>
+                    <div class="text-[10px] uppercase tracking-widest text-[#a52020] mb-3">Freedom</div>
+                    <h2 class="font-headline text-3xl md:text-4xl mb-3 leading-tight" style="color: #1a1a1a !important;">Financial Self-Sufficiency</h2>
+                    <div class="text-xs uppercase tracking-widest mb-8" style="color: rgba(0,0,0,0.3);">March 8, 2025</div>
+                    <div class="prose-blog text-base font-light leading-relaxed" style="color: rgba(0,0,0,0.65);">
+                        <p>Exerting financial power is Daddy's favorite control technique. It permeates marriages and relationships worldwide, not to mention entire governments. The Vatican is the 18th wealthiest country in the world — all men, pure patriarchy, right down to the sexual abuse, misogyny, and lies. You can buy a ticket to tour their museum and pick up a souvenir rosary. Remember how Jesus reacted to the sellers in the Temple? He was not a fan.</p>
+                        <p>Nobody tells you that money is the lock on the cage. You can have the clarity, the courage, the burning desire to leave. But if you can't pay your own rent? You stay. That's not a personal failing. That's by design.</p>
+                        <p>Making enough money to support yourself is crucial. It's your first goal after jumping off the Daddyship. Whether you've got a four-year degree, a professional certification, entrepreneurial chops, or you're learning to be an electrician or a welder — investing in yourself opens doors. Break outside the box, think outside the box, and stand on the box!</p>
+                        <p>Don't want a traditional degree? No worries! Certifications abound for women outside traditional gender roles. Got an idea for a business? Launch it. Experience in a career field will fuel your autonomy and ignite the fire of your independence. Working to support yourself is a source of pride, and having that career as you settle into your own place? That's the first real taste of freedom.</p>
+                        <p>Leaving a marriage? Lawyer up, sister! Daddy isn't the boss of you. Or your divorce. Take your 50%. Waive nothing. Watch how Daddy morphs when faced with losing control — the tantrums, the threats, the theatrics. Don't allow him to dissuade you from representation. True colors show when you're no longer under his thumb. Even with economic independence, resist the impulse to sacrifice and comply as you probably did during your entire marriage.</p>
+                        <p>Financial independence from any Daddy is imperative for your total freedom and autonomy. Every dollar you earn is a vote for the Love of Your Life. Every dollar you save is a brick in the foundation of your freedom. Make money. Your own money. Money that nobody can take away, threaten to withhold, or use as leverage against your dignity. Invest in You. Permit yourself to prioritize You.</p>
+                        <p>You are the only one who can.</p>
+                    </div>
+                    <div style="clear:both"></div>
+                    <div class="border-b border-white/10 mt-12"></div>
+                </article>
+
+                <!-- Article 4: The Power of Sexual Consent -->
+                <article id="article-4" class="mb-10 scroll-mt-32 bg-white rounded-2xl border border-black/10 p-8 md:p-12 shadow-sm">
+                    <div class="article-image-float">
+                        <img src="sexual-consent.png" alt="The Power of Sexual Consent" class="w-full h-auto object-cover" style="object-position: center 30%; max-height: 340px;">
+                    </div>
+                    <div class="text-[10px] uppercase tracking-widest text-[#a52020] mb-3">Sovereignty</div>
+                    <h2 class="font-headline text-3xl md:text-4xl mb-3 leading-tight" style="color: #1a1a1a !important;">The Power of Sexual Consent</h2>
+                    <div class="text-xs uppercase tracking-widest mb-8" style="color: rgba(0,0,0,0.3);">April 2, 2025</div>
+                    <div class="prose-blog text-base font-light leading-relaxed" style="color: rgba(0,0,0,0.65);">
+                        <p>Your body is not a compromise. It is not a negotiation. It is not something you owe anyone — not your partner, not your husband, not the guy who bought you dinner, not the culture that taught you your value lives between your legs. Your body is yours. Your pussy is yours. Your holy of holies.</p>
+                        <p>Full stop.</p>
+                        <p>Don't be a woman who doesn't give her vagina credit — or all the vaginas credit — for the hard work done throughout the centuries, birthing and nurturing mankind despite the stinging backlash of misogyny. Your lady parts are revered by mankind. The gateway to life and consciousness itself. Your power portal. Take a moment to let that sink in.</p>
+                        <p>And yet — the patriarchy's job description for your body? Serve Daddy. Be available. Be his eye candy. Bear his children. Keep his dinner warm. Hand over the keys to your sacred portal like it's a rental property. If you were raised in Sunday School, you were brainwashed to believe that Eve screwed everything up and your body belongs to your husband. That's not love, that's a lease agreement.</p>
+                        <p>Real consent isn't the absence of "no." It's the enthusiastic, clear-eyed, freely given presence of <em>yes</em>. YOUR yes. Not his expectation. Not your obligation. Not the fear of what happens if you don't. Many women have never experienced intimacy that begins with their own authentic desire because they were never taught they were allowed to have any. They learned to perform arousal, fake enjoyment, and prioritize his experience as if their own body were a stage set for someone else's show.</p>
+                        <p>Learning to love and respect your vagina and becoming intentionally responsible for her maintenance is next-level self-care. Rescuing her from the patriarchal job description and wielding her power with discernment makes you unshakable. Sexual energy is creative energy. Harnessing it enhances creativity in every area of your life.</p>
+                        <p>So here's the question, and only you can answer it: <em>Do I want this?</em> Not "should I." Not "is he expecting it." Not "will he be upset if I don't." Do. I. Want. This.</p>
+                        <p>That question is the beginning of sexual sovereignty. And sexual sovereignty is the beginning of everything else. Decentering men is re-centering you. And with her help? Your creativity, your power, your whole damn life opens up.</p>
+                    </div>
+                    <div style="clear:both"></div>
+                    <div class="border-b border-white/10 mt-12"></div>
+                </article>
+
+                <!-- Article 5: Happy Vibes -->
+                <article id="article-5" class="mb-10 scroll-mt-32 bg-white rounded-2xl border border-black/10 p-8 md:p-12 shadow-sm">
+                    <div class="article-image-float">
+                        <img src="public/images/happy-vibes.png" alt="Happy Vibes" class="w-full h-auto object-cover" style="object-position: center center; max-height: 340px;">
+                    </div>
+                    <div class="text-[10px] uppercase tracking-widest text-[#a52020] mb-3">Joy</div>
+                    <h2 class="font-headline text-3xl md:text-4xl mb-3 leading-tight" style="color: #1a1a1a !important;">Happy Vibes</h2>
+                    <div class="text-xs uppercase tracking-widest mb-8" style="color: rgba(0,0,0,0.3);">April 19, 2025</div>
+                    <div class="prose-blog text-base font-light leading-relaxed" style="color: rgba(0,0,0,0.65);">
+                        <p>Since you are the only human being alive responsible for your happiness, please practice pursuing it robustly! Look for the courage to pursue experiences that crash through fear and containment. Find your bliss and follow it happily. Be big. Spread out.</p>
+                        <p>You cannot be contained.</p>
+                        <p>Here's what nobody tells you about leaving Daddy: after the rage, the grief, the reckoning, and the rebuilding — you're <em>allowed</em> to be happy. Not productive. Not healed. Not strong. Just happy. Stupidly, irresponsibly, unapologetically happy. Maybe dance naked. Why not?</p>
+                        <p>Women have been taught that happiness is frivolous — that serious women are busy, stressed, burdened by important things. That joy is for the naive, the women who haven't woken up yet. But that's a trap too, yeah? The idea that awareness must come at the cost of lightness. That liberation has to look like suffering.</p>
+                        <p>It doesn't. Liberation looks like dancing in your kitchen at midnight with Beyonce on blast. It looks like laughing so hard your mascara runs. It looks like buying yourself flowers for no reason, canceling plans because the sunset is too beautiful to miss, getting a mani-pedi in a color you've never worn, and choosing — actively, deliberately — to let yourself feel good. Treat yourself the way you want to be treated by your lover. Want to be pampered? Pamper yourself.</p>
+                        <p>Happy vibes aren't shallow. They're radical. In a world that profits from women's anxiety, insecurity, and exhaustion, choosing joy is an act of rebellion. Every smile that isn't performed for Daddy's comfort, every laugh that comes from genuine delight, every moment of pleasure that belongs entirely to you — that's resistance. That's tyranny against the patriarchy. And it looks damn good on you.</p>
+                        <p>You did the hard work. You left the house, said no, quit the church, made money, found yourself. Now do the hardest thing of all: let yourself enjoy it. Not as a reward. Not as a milestone. As your default setting. Guard it fiercely. Feed it daily. Refuse to hand the keys to anyone who didn't help you build it.</p>
+                        <p>You are in charge of happy now, Queen. Act like it.</p>
+                    </div>
+                    <div style="clear:both"></div>
+                    <div class="border-b border-white/10 mt-12"></div>
+                </article>
+
+                <!-- Article 6: Don't Be a Water Bearer -->
+                <article id="article-6" class="mb-10 scroll-mt-32 bg-white rounded-2xl border border-black/10 p-8 md:p-12 shadow-sm">
+                    <div class="article-image-float">
+                        <img src="public/images/water-bucket.png" alt="Don't Be a Water Bearer" class="w-full h-auto object-cover" style="object-position: center center; max-height: 340px;">
+                    </div>
+                    <div class="text-[10px] uppercase tracking-widest text-[#a52020] mb-3">Liberation</div>
+                    <h2 class="font-headline text-3xl md:text-4xl mb-3 leading-tight" style="color: #1a1a1a !important;">Don't Be a Water Bearer</h2>
+                    <div class="text-xs uppercase tracking-widest mb-8" style="color: rgba(0,0,0,0.3);">May 5, 2025</div>
+                    <div class="prose-blog text-base font-light leading-relaxed" style="color: rgba(0,0,0,0.65);">
+                        <p>You know who she is. You might be her. The woman who carries everything — the emotional labor, the mental load, the calendar, the groceries, the feelings, the fallout, the peace-keeping, the planning, the remembering, the apologizing for things she didn't do. She is the water bearer. And she is drowning while keeping everybody else hydrated.</p>
+                        <p>A mother's self-sacrifice often goes on far too long, way after the departure of the young ones. Many women feel obligated to continue serving the adults in their households. The biological impulse to nurture gets captured by the patriarchy and reinterpreted as some <em>obligation</em> of womankind — another lie perpetuated through the centuries.</p>
+                        <p>So ask yourself this question: Am I living my chosen path or someone else's? Your gut knows.</p>
+                        <p>Ponder this — how have you treated Daddy, and what have you provided him? Eye candy (and all the upkeep it entails), emotional support, hand-holding through storms, navigating his family dynamics, carrying, birthing, and raising his children, all the services through the years, the sacrifices on his behalf, the purchases, plans, vacations, and holidays. Now consider: if you did a fraction of that for yourself! Imagine funneling that time, energy, money, and freedom to your best interest... exactly what would you do?</p>
+                        <p>Would you be someone different?</p>
+                        <p>Don't you know an Executive Assistant who runs the whole department while making it his idea? You know why. Stop being a nice person when being a good person is all that is required of you. Remember, you've likely been trained to care more for others than yourself. Prioritizing yourself may feel wrong. But it's not. Asserting your needs and being authentic in every environment is the measure of mental health.</p>
+                        <p>Put the bucket down. Not halfway down. Not "let me just finish this one thing" down. <em>Down.</em> On the ground. Walk away from it. Let the people who've been drinking from your labor learn to carry their own damn water.</p>
+                        <p>Mama says, "Girl, take care of yourself! Wash your face, put on some music, breathe, drink some water... sit down... how are you feeling now?" You are the Love of Your Life. Start acting like it. Your thirst counts too.</p>
+                    </div>
+                    <div style="clear:both"></div>
+                    <div class="border-b border-white/10 mt-12"></div>
+                </article>
+
+                <!-- Article 7: Bad Male Behavior -->
+                <article id="article-7" class="mb-10 scroll-mt-32 bg-white rounded-2xl border border-black/10 p-8 md:p-12 shadow-sm">
+                    <div class="article-image-float">
+                        <img src="public/images/orchard.png" alt="Bad Male Behavior" class="w-full h-auto object-cover" style="object-position: center center; max-height: 340px;">
+                    </div>
+                    <div class="text-[10px] uppercase tracking-widest text-[#a52020] mb-3">Patriarchy</div>
+                    <h2 class="font-headline text-3xl md:text-4xl mb-3 leading-tight" style="color: #1a1a1a !important;">Bad Male Behavior</h2>
+                    <div class="text-xs uppercase tracking-widest mb-8" style="color: rgba(0,0,0,0.3);">May 22, 2025</div>
+                    <div class="prose-blog text-base font-light leading-relaxed" style="color: rgba(0,0,0,0.65);">
+                        <p>This isn't about man-hating. Let's get that out of the way. It's about system-hating. Mislabeling this work as "man-hating" clearly misses the point. Some men are awesome and seem to understand that misogyny has ruled the culture in America for too long. Some men are allies who stand in solidarity with women seeking empowerment and autonomy.</p>
+                        <p>But — and this is a big but — all women have been oppressed by men. All. It's embedded in the system. It's spoon-fed misogyny.</p>
+                        <p>We keep calling it "bad behavior" like it's an anomaly. A few guys who didn't get the memo. But the entitlement, the aggression, the emotional illiteracy, the weaponized incompetence, the casual cruelty disguised as humor — none of it is accidental. It was taught, rewarded, and protected at every level. Boys will be boys. He just likes you. That's just how men are. He didn't mean it. You're overreacting. These aren't explanations — they're <em>permissions</em>.</p>
+                        <p>So let's name it. The man who talks over you in meetings isn't confident — he's dominating. The partner who punches walls isn't stressed — he's threatening. The father who controls through silence isn't stoic — he's punishing. The husband who "helps" with the kids isn't generous — he's doing the bare minimum and expecting a medal. Watch how Daddy morphs in the face of you leaving him. You'll see tantrums, threats, and theatrics. True colors show when you don't share his perspective and are not under his control.</p>
+                        <p>Where are these "good men" who deserve love and respect? The supportive ones vote for women's rights, yet they have erred on the side of caution. They have not sufficiently stood up or forced their peers to evolve. Good men's collective silence and inactivity have inevitably supported the oppression of women. Men are coarse learners with proud egos — there are zero new concepts in these pages, and still the ideas don't land.</p>
+                        <p>Here's a thought: if you're a man and you want to have sex with a woman, be someone she wants to have sex with. Research it if you need to. Become a vocal activist for women. Educate your bros, Bruh.</p>
+                        <p>The patriarchy needs a time-out. A consequence. And women are done being told to just pick around the rotten apples when it's the whole damn orchard.</p>
+                    </div>
+                    <div style="clear:both"></div>
+                    <div class="border-b border-white/10 mt-12"></div>
+                </article>
+
+                <!-- Article 8: Mother Knows Best -->
+                <article id="article-8" class="mb-10 scroll-mt-32 bg-white rounded-2xl border border-black/10 p-8 md:p-12 shadow-sm">
+                    <div class="article-image-float">
+                        <img src="public/images/womanpower.png" alt="Mother Knows Best" class="w-full h-auto object-cover" style="object-position: center 15%; max-height: 340px;">
+                    </div>
+                    <div class="text-[10px] uppercase tracking-widest text-[#a52020] mb-3">Matriarchy</div>
+                    <h2 class="font-headline text-3xl md:text-4xl mb-3 leading-tight" style="color: #1a1a1a !important;">Mother Knows Best</h2>
+                    <div class="text-xs uppercase tracking-widest mb-8" style="color: rgba(0,0,0,0.3);">June 8, 2025</div>
+                    <div class="prose-blog text-base font-light leading-relaxed" style="color: rgba(0,0,0,0.65);">
+                        <p>Imagine a matriarchal thought bubble enveloping the planet. Imagine Mother Nature's seasonal color palette enveloping humanity's senses in tender, loving embraces and rhythmic cycles and patterns of experience that foster growth and expansion of love and consciousness. What if, instead of Father Time's matrix dictating life's meaning as accumulating wealth and conquering nations, it were more about the ebb and flow of life on the planet?</p>
+                        <p>What if success were measured in connectivity with other humans and the health and well-being of the collective? What if mutual respect for all species were a given, and cooperation replaced competition, collaboration replaced control, and "the power of love replaced the love of power"?</p>
+                        <p>Mother Nature would rejoice.</p>
+                        <p>Under the current patriarchal authority, the planet's life is hanging by a thread. Men suck at housekeeping. Misplaced priorities and unauthorized arrogance have clouded their contribution. Sure, they "built the world," but now they are burning it down and starving its children. Decisions have been made for centuries behind closed doors in rooms empty of women — votes taken, wars launched, nations carved up without a maternal perspective in sight.</p>
+                        <p>But mothers know things. They know when something is wrong before the test results come back. They know which friend is a bad influence before the damage is done. They know that healing happens in the kitchen, that grief needs witnesses, that children don't need perfection — they need presence. These aren't soft skills. These are the <em>missing</em> skills. The exact prescription for what ails planet Earth today.</p>
+                        <p>Alignment with the Divine Feminine qualities — ebbing, flowing, connecting, nurturing, intuiting, feeling, and mutually respecting all life — will fill the gap that's missing from the patriarchal manifesto. So it seems there is only one solution:</p>
+                        <p>The complete and total takeover by women!</p>
+                        <p>It's doable. It's happening. And you are right here, right now. A force of Mother Nature is brewing and sweeping the planet with healing energy. The revolution isn't women learning to lead. It's the world finally learning to listen. Mother knows best. She always did.</p>
+                    </div>
+                    <div style="clear:both"></div>
+                    <div class="border-b border-white/10 mt-12"></div>
+                </article>
+
+                <!-- Article 9: You Have YOU -->
+                <article id="article-9" class="mb-10 scroll-mt-32 bg-white rounded-2xl border border-black/10 p-8 md:p-12 shadow-sm">
+                    <div class="article-image-float">
+                        <img src="public/images/happy-girl.png" alt="You Have YOU" class="w-full h-auto object-cover" style="object-position: center 20%; max-height: 340px;">
+                    </div>
+                    <div class="text-[10px] uppercase tracking-widest text-[#a52020] mb-3">Self</div>
+                    <h2 class="font-headline text-3xl md:text-4xl mb-3 leading-tight" style="color: #1a1a1a !important;">You Have YOU</h2>
+                    <div class="text-xs uppercase tracking-widest mb-8" style="color: rgba(0,0,0,0.3);">June 22, 2025</div>
+                    <div class="prose-blog text-base font-light leading-relaxed" style="color: rgba(0,0,0,0.65);">
+                        <p>A butterfly wasn't always a butterfly. Even the most exquisite monarch was a hot mess ten days ago — a sloppy heap in the chrysalis as her body parts dissolved around her. No doubt she felt scared. Little did she know her plump and dumpy caterpillar body goo was being repurposed into beautiful wings for taking flight and antennae for connecting with Mother Nature.</p>
+                        <p>It's a miracle! It's also ordinary — even mundane. Metamorphosis follows a predictable path: growth, dissolution, then the freedom to fly.</p>
+                        <p>If you are here, reading these words, you are likely in some stage of transformation. Congratulations! You are not alone. Millions of women are wriggling in their chrysalises, wondering how to become happier and healthier in pursuit of their bliss.</p>
+                        <p>At the end of it all — after you've left the house, said no, quit the church, made money, taken a lover, met your body, faced your shadows, felt your rage, climbed higher, had your reckoning, and claimed your joy — there is one person standing. You. Not the version Daddy approved. Not the palatable, manageable, convenient you. The <em>real</em> you. The one who was under there the whole time, buried beneath decades of conditioning and self-sacrifice. She's still here. She's been waiting.</p>
+                        <p>You are the Love of Your Life. That's not a consolation prize. That's the whole damn point. Every step, every act of rebellion, every painful shedding of a skin that was never yours — it was all leading here. To the moment you look in the mirror and recognize the woman looking back. Not with judgment. Not with a to-do list. With love.</p>
+                        <p>The patriarchy taught you that you are not enough on your own. That you need a man, a title, a ring, a role to be complete. That a woman alone is a woman who failed. But a woman alone — truly, freely, powerfully alone — is a woman who chose herself. And that is the most dangerous thing in the world to a system that depends on your self-doubt.</p>
+                        <p>You are so much more than the box you came in. Feel free to kick those cardboard walls down. Or curl up inside them until you're ready. That day will come if you continue to listen for your voice. Your gut will never mislead you because she is anchored in Mother Nature's matrix of energetic connection.</p>
+                        <p>You have you, sister. And she is extraordinary. She is free. And she is just getting started.</p>
+                    </div>
+                    <div style="clear:both"></div>
+                    <div class="border-b border-white/10 mt-12"></div>
+                </article>
+
+                <!-- Article 10: What Is Happiness? -->
+                <article id="article-10" class="mb-10 scroll-mt-32 bg-white rounded-2xl border border-black/10 p-8 md:p-12 shadow-sm">
+                    <div class="article-image-float">
+                        <img src="public/images/happy.png" alt="What Is Happiness?" class="w-full h-auto object-cover" style="object-position: center center; max-height: 340px;">
+                    </div>
+                    <div class="text-[10px] uppercase tracking-widest text-[#a52020] mb-3">Philosophy</div>
+                    <h2 class="font-headline text-3xl md:text-4xl mb-3 leading-tight" style="color: #1a1a1a !important;">What Is Happiness?</h2>
+                    <div class="text-xs uppercase tracking-widest mb-8" style="color: rgba(0,0,0,0.3);">July 6, 2025</div>
+                    <div class="prose-blog text-base font-light leading-relaxed" style="color: rgba(0,0,0,0.65);">
+                        <p>What did you like to do when you were a kid? When were you happiest? Do you remember? What music or hobby? What sport or club? What books? What television shows and characters? Who inspires you? What badass woman is showing up for herself in a way you love and want to imitate — the highest form of flattery?</p>
+                        <p>Think about it.</p>
+                        <p>The patriarchy has its own definition of happiness for women: a husband, children, a clean house, a grateful smile. Fulfillment through service. Joy through sacrifice. Contentment through disappearance. The patriarchy's assertion — demand? — that a woman's place is barefoot and pregnant, patiently waiting Daddy's return from the world while keeping his dinner warm, is as insulting as it is transparent. And if that formula doesn't work for you? If you feel restless, unsatisfied, hungry for something you can't name?</p>
+                        <p>There is nothing wrong with you. The formula is wrong.</p>
+                        <p>Happiness is not compliance. It is not the absence of conflict or the presence of a man. Happiness — real happiness — is alignment. It's the feeling of living in accordance with your own truth. Not your mother's truth, not your husband's truth, not the culture's truth. <em>Yours.</em> Simply existing outside the matrix of productivity becomes an act of rebellion.</p>
+                        <p>Sometimes happiness is loud — the belly laugh, the dance floor, Beyonce on repeat, the road trip with no plan. But more often it's quiet. The morning coffee in silence. The walk with no destination. The deep exhale of a woman who has finally stopped performing and started being. Release the ticking "time bomb" of the masculine construct, and as you exhale, release the stress and relax, noticing the calm.</p>
+                        <p>Looking for unconditional love, protection, or direction anywhere but within yourself will ultimately leave you empty. You won't find happiness by looking for it out there. You'll find it by removing everything that isn't it — the obligations you never agreed to, the roles you never chose, the standards you never set. Strip all of that away, and what's left?</p>
+                        <p>You. The Love of Your Life. And you, it turns out, are the happiness you were looking for all along. Good job, Mama.</p>
+                    </div>
+                    <div style="clear:both"></div>
+                </article>
+
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 bg-[#020202] pt-20 pb-10 px-6 md:px-12 relative z-20 overflow-hidden">
+        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-[500px] h-[300px] bg-[#721515] opacity-[0.05] blur-[100px] rounded-full pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-10 mb-16">
+                <div>
+                    <h2 class="font-serif text-4xl tracking-tight text-white mb-2">Vanessa Prestridge Graf</h2>
+                    <p class="text-xs text-white/40 font-light tracking-widest uppercase">11 Steps to Leaving Your Daddy</p>
+                </div>
+                
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 pt-8 border-t border-white/10">
+                <p class="text-sm text-white/30 font-light">&copy; 2025 Vanessa Prestridge Graf. All rights reserved.</p>
+                
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        let menuOpen = false;
+
+        menuToggle.addEventListener('click', () => {
+            menuOpen = !menuOpen;
+            if (menuOpen) {
+                mobileMenu.style.opacity = '1';
+                mobileMenu.style.pointerEvents = 'auto';
+                menuToggle.innerHTML = '<iconify-icon icon="solar:close-circle-linear" class="text-2xl"></iconify-icon>';
+            } else {
+                mobileMenu.style.opacity = '0';
+                mobileMenu.style.pointerEvents = 'none';
+                menuToggle.innerHTML = '<iconify-icon icon="solar:hamburger-menu-linear" class="text-2xl"></iconify-icon>';
+            }
+        });
+
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                menuOpen = false;
+                mobileMenu.style.opacity = '0';
+                mobileMenu.style.pointerEvents = 'none';
+                menuToggle.innerHTML = '<iconify-icon icon="solar:hamburger-menu-linear" class="text-2xl"></iconify-icon>';
+            });
+        });
+
+        // Light/dark mode toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const themeToggleMobile = document.getElementById('themeToggleMobile');
+        const themeIcon = document.getElementById('themeIcon');
+        const themeIconMobile = document.getElementById('themeIconMobile');
+        let isLight = localStorage.getItem('theme') !== 'dark';
+
+        function applyTheme() {
+            if (isLight) {
+                document.body.classList.add('light-mode');
+                themeIcon.setAttribute('icon', 'solar:moon-linear');
+                themeIconMobile.setAttribute('icon', 'solar:moon-linear');
+            } else {
+                document.body.classList.remove('light-mode');
+                themeIcon.setAttribute('icon', 'solar:sun-2-linear');
+                themeIconMobile.setAttribute('icon', 'solar:sun-2-linear');
+            }
+            localStorage.setItem('theme', isLight ? 'light' : 'dark');
+        }
+
+        function toggleTheme() {
+            isLight = !isLight;
+            applyTheme();
+        }
+
+        applyTheme();
+        themeToggle.addEventListener('click', toggleTheme);
+        themeToggleMobile.addEventListener('click', toggleTheme);
+
+        // TOC active state tracking via Intersection Observer
+        const articles = document.querySelectorAll('article[id^="article-"]');
+        const tocLinks = document.querySelectorAll('.toc-link');
+        const tocMobileLinks = document.querySelectorAll('.toc-mobile-link');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.id;
+                    const index = id.replace('article-', '');
+
+                    tocLinks.forEach(link => link.classList.remove('active'));
+                    tocMobileLinks.forEach(link => link.classList.remove('active'));
+
+                    document.querySelectorAll(`.toc-link[data-toc="${index}"]`).forEach(l => l.classList.add('active'));
+                    document.querySelectorAll(`.toc-mobile-link[data-toc="${index}"]`).forEach(l => {
+                        l.classList.add('active');
+                        // Scroll mobile TOC to show active link
+                        l.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                    });
+                }
+            });
+        }, {
+            rootMargin: '-20% 0px -60% 0px',
+            threshold: 0
+        });
+
+        articles.forEach(article => observer.observe(article));
+
+        // Smooth scroll for TOC links
+        document.querySelectorAll('.toc-link, .toc-mobile-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const target = document.querySelector(link.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+
+</body></html>
