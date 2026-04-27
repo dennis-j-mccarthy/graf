@@ -56,8 +56,11 @@ transform-style: preserve-3d;
 position: relative;
 transform-style: preserve-3d;
 animation: float-book 8s ease-in-out infinite;
-width: 351px;
-height: 527px;
+width: 260px;
+height: 390px;
+}
+@media (min-width: 480px) {
+.book-model { width: 320px; height: 480px; }
 }
 @media (min-width: 768px) {
 .book-model { width: 432px; height: 648px; }
@@ -553,7 +556,8 @@ linear-gradient(to bottom, rgba(114, 21, 21, 0.1) 1px, transparent 1px);
                 .flip-card { perspective: 1000px; cursor: pointer; }
                 .flip-card-inner { position: relative; width: 100%; height: 100%; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); transform-style: preserve-3d; }
                 .flip-card:hover .flip-card-inner, .flip-card.flipped .flip-card-inner { transform: rotateY(180deg); }
-                .flip-card-front, .flip-card-back { position: absolute; inset: 0; backface-visibility: hidden; border-radius: 1rem; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; }
+                .flip-card-front, .flip-card-back { position: absolute; inset: 0; backface-visibility: hidden; border-radius: 1rem; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0.875rem; overflow: hidden; }
+                @media (min-width: 768px) { .flip-card-front, .flip-card-back { padding: 2rem; } }
                 .flip-card-front { background: #ffffff; border: 1px solid rgba(0,0,0,0.08); }
                 .flip-card-back { background: #721515; transform: rotateY(180deg); }
                 .flip-card-back * { color: #ffffff !important; }
@@ -1298,7 +1302,7 @@ linear-gradient(to bottom, rgba(114, 21, 21, 0.1) 1px, transparent 1px);
     </script>
 
     <!-- Slide-in CTA -->
-    <div id="slideInCTA" class="fixed bottom-6 right-6 z-50 translate-x-full opacity-0 transition-all duration-500 ease-out max-w-xs">
+    <div id="slideInCTA" class="hidden md:block fixed bottom-6 right-6 z-50 translate-x-full opacity-0 transition-all duration-500 ease-out max-w-xs">
         <div class="slide-in-card bg-[#0a0a0a] border border-white/10 rounded-2xl p-5 shadow-2xl relative overflow-hidden">
             <div class="absolute -top-10 -right-10 w-24 h-24 bg-[#721515] opacity-[0.15] blur-[30px] rounded-full pointer-events-none"></div>
             <button id="slideInClose" class="absolute top-3 right-3 w-6 h-6 rounded-full bg-white/5 flex items-center justify-center text-white/40 hover:text-white hover:bg-white/10 transition-all text-xs">&times;</button>
