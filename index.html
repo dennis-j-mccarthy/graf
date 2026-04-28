@@ -421,21 +421,22 @@ linear-gradient(to bottom, rgba(114, 21, 21, 0.1) 1px, transparent 1px);
             </button>
         </div>
 
-        <!-- Mobile menu -->
-        <div id="mobileMenu" class="fixed inset-0 bg-[#050505] z-[60] flex flex-col items-center justify-center gap-8 opacity-0 pointer-events-none transition-opacity duration-300">
-            <a href="/" class="text-lg uppercase tracking-widest text-[#721515] transition-colors mobile-link">The Book</a>
-            <a href="about.html" class="text-lg uppercase tracking-widest text-white/70 hover:text-white transition-colors mobile-link">About Vanessa</a>
-            <a href="blog.html" class="text-lg uppercase tracking-widest text-white/70 hover:text-white transition-colors mobile-link">Blog</a>
-            <a href="playlists.html" class="text-lg uppercase tracking-widest text-white/70 hover:text-white transition-colors mobile-link">Playlists</a>
-            <a href="contact.html" class="text-lg uppercase tracking-widest text-white/70 hover:text-white transition-colors mobile-link">Contact</a>
-            <div class="mt-4">
-                <a href="https://www.amazon.com/11-Steps-Leaving-Your-Daddy/dp/B0FZQ26Q6P?crid=14GNHRQE3NXKI&dib=eyJ2IjoiMSJ9.nxESnlRCD7rowIRn7ILeiXSzuuN3kDXTdh6zrf2GQxAWc5uuKZEP36bgyw4izTxz3VJzagRJgnLgCGezqZDRggmeSCTFZqENowzqrTeeOIvRASiRLa4RL92pHOsOp0JVZrtn7PJeUjItmqKZxQIQTQWHhhU3Iejpv321xTvBM4D0kCjlSNtUIMKY_MgJ9Gmp3s5otrGo5DCtSyRTGUtHTkOPNyY4cAIAQ3qUjuPYQZ4.-g6UJ9NVVn1zCIUutHnZox9XmI5JkMmQaNDuGuEfg3Q&dib_tag=se&keywords=leave+your+daddy&qid=1774124013&sprefix=leaev+your+daddy%2Caps%2C151&sr=8-1" target="_blank" rel="noopener" class="text-sm font-medium uppercase tracking-widest bg-[#721515] text-white px-8 py-3 rounded-full transition-all hover:bg-[#a52020] mobile-link">
-                    Order Now
-                </a>
-            </div>
-        </div>
     </div>
     </nav>
+
+    <!-- Mobile menu (outside nav so its z-index isn't trapped) -->
+    <div id="mobileMenu" class="fixed inset-0 bg-[#050505] z-[80] flex flex-col items-center justify-center gap-8 opacity-0 pointer-events-none transition-opacity duration-300">
+        <a href="/" class="text-lg uppercase tracking-widest text-[#721515] transition-colors mobile-link">The Book</a>
+        <a href="about.html" class="text-lg uppercase tracking-widest text-white/70 hover:text-white transition-colors mobile-link">About Vanessa</a>
+        <a href="blog.html" class="text-lg uppercase tracking-widest text-white/70 hover:text-white transition-colors mobile-link">Blog</a>
+        <a href="playlists.html" class="text-lg uppercase tracking-widest text-white/70 hover:text-white transition-colors mobile-link">Playlists</a>
+        <a href="contact.html" class="text-lg uppercase tracking-widest text-white/70 hover:text-white transition-colors mobile-link">Contact</a>
+        <div class="mt-4">
+            <a href="https://www.amazon.com/11-Steps-Leaving-Your-Daddy/dp/B0FZQ26Q6P?crid=14GNHRQE3NXKI&dib=eyJ2IjoiMSJ9.nxESnlRCD7rowIRn7ILeiXSzuuN3kDXTdh6zrf2GQxAWc5uuKZEP36bgyw4izTxz3VJzagRJgnLgCGezqZDRggmeSCTFZqENowzqrTeeOIvRASiRLa4RL92pHOsOp0JVZrtn7PJeUjItmqKZxQIQTQWHhhU3Iejpv321xTvBM4D0kCjlSNtUIMKY_MgJ9Gmp3s5otrGo5DCtSyRTGUtHTkOPNyY4cAIAQ3qUjuPYQZ4.-g6UJ9NVVn1zCIUutHnZox9XmI5JkMmQaNDuGuEfg3Q&dib_tag=se&keywords=leave+your+daddy&qid=1774124013&sprefix=leaev+your+daddy%2Caps%2C151&sr=8-1" target="_blank" rel="noopener" class="text-sm font-medium uppercase tracking-widest bg-[#721515] text-white px-8 py-3 rounded-full transition-all hover:bg-[#a52020] mobile-link">
+                Order Now
+            </a>
+        </div>
+    </div>
 
     <section id="hero" class="relative w-full flex flex-col items-center pt-24 pb-16 px-6 md:px-12 lg:px-16 z-10 overflow-hidden lg:max-h-[875px]">
 
