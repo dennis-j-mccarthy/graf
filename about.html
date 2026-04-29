@@ -109,6 +109,9 @@ color: #2a2218 !important;
 body.light-mode #mobileMenu a.text-\[\#721515\].mobile-link {
 color: #721515 !important;
 }
+body.light-mode .ambient-blob {
+display: none;
+}
 body.light-mode ::-webkit-scrollbar-track {
 background: #F4EFE6;
 }
@@ -119,8 +122,8 @@ background: #c4b9a8;
 <body class="scroll-smooth bg-[#050505] text-[#F4EFE6] selection:bg-[#721515] selection:text-[#F4EFE6] overflow-x-hidden relative light-mode">
 <script>if(localStorage.getItem('theme')==='dark')document.body.classList.remove('light-mode');</script>
 
-    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-[#721515] opacity-[0.03] blur-[120px] rounded-full pointer-events-none z-0"></div>
-    <div class="fixed bottom-0 right-0 w-[800px] h-[800px] bg-[#721515] opacity-[0.02] blur-[150px] rounded-full pointer-events-none z-0"></div>
+    <div class="ambient-blob fixed top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-[#721515] opacity-[0.03] blur-[120px] rounded-full pointer-events-none z-0"></div>
+    <div class="ambient-blob fixed bottom-0 right-0 w-[800px] h-[800px] bg-[#721515] opacity-[0.02] blur-[150px] rounded-full pointer-events-none z-0"></div>
 
     <nav class="fixed top-0 w-full z-50 backdrop-blur-xl bg-[#050505]/60 border-b border-white/5 py-4 px-6 md:px-12 transition-all duration-300">
     <div class="max-w-7xl mx-auto flex justify-between items-center">
